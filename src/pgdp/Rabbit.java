@@ -7,10 +7,18 @@ public class Rabbit extends Vegetarian {
      *
      */
     public Rabbit(boolean female) {
-        //TODO
         super(female);
     }
 
+    @Override
+    public Move[] possibleMoves() {
+        return super.possibleMoves();
+    }
+
+    @Override
+    public void sunset() {
+        super.sunset();
+    }
 
     @Override
     public String toString(){

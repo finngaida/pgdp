@@ -34,7 +34,118 @@ public class Position {
      * Der Parameter gibt an, welche Seite beginnt ('M' oder 'W').
      */
     public void reset(char movesNext) {
-        //TODO
+
+        Snake a8 = new Snake(false);
+        a8.square = "a8";
+
+        Elephant b8 = new Elephant(false);
+        b8.square = "b8";
+
+        Horse c8 = new Horse(false);
+        c8.square = "c8";
+
+        Leopard d8 = new Leopard(false);
+        d8.square = "d8";
+
+        Leopard e8 = new Leopard(false);
+        e8.square = "e8";
+
+        Horse f8 = new Horse(false);
+        f8.square = "f8";
+
+        Elephant g8 = new Elephant(false);
+        g8.square = "g8";
+
+        Snake h8 = new Snake(false);
+        h8.square = "h8";
+
+
+        Penguin a7 = new Penguin(false);
+        a7.square = "a7";
+
+        Rabbit b7 = new Rabbit(false);
+        b7.square = "b7";
+
+        Rabbit c7 = new Rabbit(false);
+        c7.square = "c7";
+
+        Rabbit d7 = new Rabbit(false);
+        d7.square = "d7";
+
+        Rabbit e7 = new Rabbit(false);
+        e7.square = "e7";
+
+        Rabbit f7 = new Rabbit(false);
+        f7.square = "f7";
+
+        Rabbit g7 = new Rabbit(false);
+        g7.square = "g7";
+
+        Penguin h7 = new Penguin(false);
+        h7.square = "h7";
+
+
+
+        Penguin a2 = new Penguin(true);
+        a2.square = "a2";
+
+        Rabbit b2 = new Rabbit(true);
+        b2.square = "b2";
+
+        Rabbit c2 = new Rabbit(true);
+        c2.square = "c2";
+
+        Rabbit d2 = new Rabbit(true);
+        d2.square = "d2";
+
+        Rabbit e2 = new Rabbit(true);
+        e2.square = "e2";
+
+        Rabbit f2 = new Rabbit(true);
+        f2.square = "f2";
+
+        Rabbit g2 = new Rabbit(true);
+        g2.square = "g2";
+
+        Penguin h2 = new Penguin(true);
+        h2.square = "h2";
+
+
+        Snake a1 = new Snake(true);
+        a1.square = "a1";
+
+        Elephant b1 = new Elephant(true);
+        b1.square = "b1";
+
+        Horse c1 = new Horse(true);
+        c1.square = "c1";
+
+        Leopard d1 = new Leopard(true);
+        d1.square = "d1";
+
+        Leopard e1 = new Leopard(true);
+        e1.square = "e1";
+
+        Horse f1 = new Horse(true);
+        f1.square = "f1";
+
+        Elephant g1 = new Elephant(true);
+        g1.square = "g1";
+
+        Snake h1 = new Snake(true);
+        h1.square = "h1";
+
+        myAnimals = new Animal[]{   a8, b8, c8, d8, e8, f8, g8, h8,
+                                    a7, b7, c7, d7, e7, f7, g7, h7,
+
+                                    a2, b2, c2, d2, e2, f2, g2, h2,
+                                    a1, b1, c1, d1, e1, f1, g1, h1};
+        nrAnimals = myAnimals.length;
+
+        for (int i = 0; i < nrAnimals; i++) {
+            myAnimals[i].position = this;
+            myAnimals[i].alive = true;
+        }
     }
 
 

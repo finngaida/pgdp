@@ -19,11 +19,29 @@ package pgdp;
  */
 public class Globals {
 
+    public static final Integer i(Character c) {
+        switch (""+c) {
+            case "a": return 1;
+            case "b": return 2;
+            case "c": return 3;
+            case "d": return 4;
+            case "e": return 5;
+            case "f": return 6;
+            case "g": return 7;
+            case "h": return 8;
+            default: return Integer.MAX_VALUE;
+        }
+    }
+
+    public static final String s(Integer i) {
+        if (i > 0 && i < 9) {
+            return new String[]{"a", "b", "c", "d", "e", "f", "g", "h"}[i];
+        } else { return ""; }
+    }
+
     // Der Wert von ANSI darf geaendert werden.
     // Alles andere muss unveraendert bleiben.
-    private static final boolean ANSI = true; // or false
-
-
+    private static final boolean ANSI = false; // or false
 
     // Ab hier darf nichts mehr veraendert werden.
     private static final String ANSI_W_LIGHT = "\u001B[34;47m";

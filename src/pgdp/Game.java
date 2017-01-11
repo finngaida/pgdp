@@ -29,5 +29,7 @@ public class Game {
         pos = new Position();
         pos.reset(ladiesFirst ? 'W' : 'M');
         //TODO
+
+        System.out.println(pos.toString());
     }
 }

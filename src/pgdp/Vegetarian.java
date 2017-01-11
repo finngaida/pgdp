@@ -10,7 +10,6 @@ public class Vegetarian extends Animal {
      *
      */
     public Vegetarian(boolean female) {
-        //TODO
         super(female);
     }
 

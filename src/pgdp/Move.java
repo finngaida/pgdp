@@ -11,25 +11,38 @@ package pgdp;
  */
 public class Move {
 
+    private String from;
+    private String to;
+
     public Move(String from, String to){
-        //TODO
+        this(from+to);
     }
 
     public Move(String move){
-        //TODO
+
+        if (move.length() != 4) {
+            throw new RuntimeException("Move has to be 4 characters long");
+        }
+
+        this.from = "" + move.charAt(0) + move.charAt(1);
+        this.from = "" + move.charAt(2) + move.charAt(3);
     }
 
     @Override
     public String toString(){
-        //TODO
         // Rueckgabe exakt in der Form <Ausgangsfeld><Zielfeld> als String,
         // also z. B. "b2b3" fuer den Zug eines Tiers von "b2" nach "b3".
-        return "";
+        return from+to;
     }
 
     public boolean equals(Object other) {
-        //TODO
-        return false;
+
+        if (other instanceof Move) {
+            Move cast = (Move)other;
+            return (cast.from.equals(this.from) && cast.to.equals(this.to));
+        } else {
+            return false;
+        }
     }
 
 }

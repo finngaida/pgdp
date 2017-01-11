@@ -13,10 +13,18 @@ public class Penguin extends Predator {
      *
      */
     public Penguin(boolean female) {
-        //TODO
         super(female);
     }
 
+    @Override
+    public Move[] possibleMoves() {
+        return super.possibleMoves();
+    }
+
+    @Override
+    public void sunset() {
+        super.sunset();
+    }
 
     @Override
     public String toString(){

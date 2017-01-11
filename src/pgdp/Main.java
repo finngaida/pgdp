@@ -12,7 +12,10 @@ package pgdp;
 public class Main {
 
     public static void main(String args[]) {
-        //TODO
+
+        Game game = new Game();
+        game.startGame(true);
+
     }
 
 }

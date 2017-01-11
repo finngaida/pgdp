@@ -13,10 +13,18 @@ public class Snake extends Predator {
      *
      */
     public Snake(boolean female) {
-        //TODO
         super(female);
     }
 
+    @Override
+    public Move[] possibleMoves() {
+        return super.possibleMoves();
+    }
+
+    @Override
+    public void sunset() {
+        super.sunset();
+    }
 
     @Override
     public String toString(){

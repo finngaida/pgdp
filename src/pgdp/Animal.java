@@ -17,7 +17,7 @@ public class Animal {
      *
      */
     public Animal(boolean female) {
-        //TODO
+        this.female = female;
     }
 
 

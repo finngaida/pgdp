@@ -10,7 +10,6 @@ public class Predator extends Animal {
      *
      */
     public Predator(boolean female) {
-        //TODO
         super(female);
     }
 
