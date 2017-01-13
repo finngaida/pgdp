@@ -25,6 +25,10 @@ public class Penguin extends Predator {
         String center = Globals.s(row);
         String right = Globals.s(row+1);
 
+        Integer leftI = row-1;
+        Integer centerI = row;
+        Integer rightI = row+1;
+
         Integer top = col-1;
         Integer bottom = col+1;
 
@@ -32,13 +36,15 @@ public class Penguin extends Predator {
         int count = 0;
 
         if (row > 1) {
-            if (col > 1) {
+            if (col > 1 && position.boardRepresentation()[leftI][top] == null) {
                 allMoves[count] = left + top;
             }
 
-            allMoves[count+1] = left+col;
+            if (position.boardRepresentation()[leftI][col] == null){
+                allMoves[count + 1] = left + col;
+            }
 
-            if (col < 9) {
+            if (col < 9 && position.boardRepresentation()[leftI][bottom] == null) {
                 allMoves[count + 2] = left + bottom;
             }
 
@@ -46,25 +52,27 @@ public class Penguin extends Predator {
         }
 
         if (row < 8) {
-            if (col > 1) {
+            if (col > 1 && position.boardRepresentation()[rightI][top] == null) {
                 allMoves[count] = right + top;
             }
 
-            allMoves[count+1] = right+col;
+            if (position.boardRepresentation()[rightI][col] == null){
+                allMoves[count + 1] = right + col;
+            }
 
-            if (col < 9) {
+            if (col < 9 && position.boardRepresentation()[rightI][bottom] == null) {
                 allMoves[count + 2] = right + bottom;
             }
 
             count = count+3;
         }
 
-        if (col > 1) {
+        if (col > 1 && position.boardRepresentation()[centerI][top] == null) {
             allMoves[count+1] = center+top;
             count++;
         }
 
-        if (col < 8) {
+        if (col < 8 && position.boardRepresentation()[centerI][bottom] == null) {
             allMoves[count+1] = center+bottom;
             count++;
         }

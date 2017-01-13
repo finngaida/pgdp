@@ -35,6 +35,8 @@ public class Position {
      */
     public void reset(char movesNext) {
 
+        this.next = movesNext;
+
         Snake a8 = new Snake(false);
         a8.square = "a8";
 
@@ -177,8 +179,46 @@ public class Position {
      *
      */
     public char theWinner() {
-        //TODO
-        return Character.MIN_VALUE;
+
+        // case: no more animals
+        if (nrAnimals == 0) {
+            return 'N';
+        }
+
+        // case: one side no more animals
+        Integer mCount = 0;
+        Integer wCount = 0;
+        boolean predatorFound = false;
+        for (int i = 0; i < nrAnimals; i++) {
+            if (myAnimals[i].female) {
+                wCount++;
+            } else {
+                mCount++;
+            }
+
+            if (myAnimals[i] instanceof Predator) {
+                predatorFound = true;
+            }
+        }
+
+        if (mCount == 0) {
+            return 'W';
+        } else if (wCount == 0) {
+            return 'M';
+        }
+
+        // case: no more predators
+        if (!predatorFound) {
+            if (mCount == wCount) {
+                return 'N';
+            } else if (mCount > wCount) {
+                return 'M';
+            } else {
+                return 'W';
+            }
+        }
+
+        return 'X';
     }
 
 

@@ -23,23 +23,11 @@ public class Leopard extends Predator {
         Integer col = Globals.i(this.square.charAt(1));
 
         // Elephant
-        int counter = 0;
-        String[] straightMoves = new String[15];
-
-        for (int i = 0; i < 8; i++) {
-            if (i != row) {
-                straightMoves[counter] = Globals.s(i)+col;
-                counter++;
-            }
-
-            if (i != col) {
-                straightMoves[counter] = ""+this.square.charAt(0)+i;
-                counter++;
-            }
-        }
+        Elephant peter = new Elephant(female);
+        peter.square = this.square;
 
         // Diagonalen
-        counter = 0;
+        int counter = 0;
         String[] diagMoves = new String[13];
 
         for (int i = 1; i < 7; i++) {
@@ -77,7 +65,7 @@ public class Leopard extends Predator {
             }
         }
 
-        Move[] moves = new Move[counter+15];
+        Move[] moves = new Move[counter+peter.possibleMoves().length];
 
         // insert diagonal moves
         for (int i = 0; i < counter; i++) {
@@ -85,8 +73,8 @@ public class Leopard extends Predator {
         }
 
         // insert straight moves
-        for (int i = counter; i < counter+15; i++) {
-            moves[i] = new Move(this.square, straightMoves[i]);
+        for (int i = counter; i < counter+peter.possibleMoves().length; i++) {
+            moves[i] = peter.possibleMoves()[i];
         }
 
         return moves;

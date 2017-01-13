@@ -20,73 +20,73 @@ public class Horse extends Vegetarian {
         String[] allMoves = new String[12];
 
         // 1 nach links
-        if (row > 1) {
+        if (row > 1 && position.boardRepresentation()[row-1][col] == null) {
             allMoves[counter] = Globals.s(row-1)+col;
             counter++;
         }
 
         // 1 nach oben
-        if (col > 1) {
+        if (col > 1 && position.boardRepresentation()[row][col-1] == null) {
             allMoves[counter] = Globals.s(row)+(col-1);
             counter++;
         }
 
         // 1 nach rechts
-        if (row < 8) {
+        if (row < 8 && position.boardRepresentation()[row+1][col] == null) {
             allMoves[counter] = Globals.s(row+1)+col;
             counter++;
         }
 
         // 1 nach unten
-        if (col < 8) {
+        if (col < 8 && position.boardRepresentation()[row][col+1] == null) {
             allMoves[counter] = Globals.s(row)+(col+1);
             counter++;
         }
 
         // Oben links 1
-        if (row > 2 && col > 2) {
+        if (row > 2 && col > 2 && position.boardRepresentation()[row-2][col-2] == null) {
             allMoves[counter] = Globals.s(row-2)+Globals.s(col-2);
             counter++;
         }
 
         // Oben links 2
-        if (row > 3 && col > 3) {
+        if (row > 3 && col > 3 && position.boardRepresentation()[row-3][col-3] == null) {
             allMoves[counter] = Globals.s(row-3)+Globals.s(col-3);
             counter++;
         }
 
         // Oben rechts 1
-        if (row < 7 && col > 2) {
+        if (row < 7 && col > 2 && position.boardRepresentation()[row+2][col-2] == null) {
             allMoves[counter] = Globals.s(row+2)+Globals.s(col-2);
             counter++;
         }
 
         // Oben rechts 2
-        if (row < 6 && col > 3) {
+        if (row < 6 && col > 3 && position.boardRepresentation()[row-3][col-3] == null) {
             allMoves[counter] = Globals.s(row+3)+Globals.s(col-3);
             counter++;
         }
 
         // Unten rechts 1
-        if (row < 7 && col < 7) {
+        if (row < 7 && col < 7 && position.boardRepresentation()[row+2][col+2] == null) {
             allMoves[counter] = Globals.s(row+2)+Globals.s(col+2);
             counter++;
         }
 
         // Oben links 2
-        if (row < 6 && col < 6) {
+        if (row < 6 && col < 6 && position.boardRepresentation()[row+3][col+3] == null) {
             allMoves[counter] = Globals.s(row+3)+Globals.s(col+3);
             counter++;
         }
 
         // Unten links 1
-        if (row > 2 && col < 7) {
+        if (row > 2 && col < 7 && position.boardRepresentation()[row-2][col+2] == null) {
             allMoves[counter] = Globals.s(row-2)+Globals.s(col+2);
             counter++;
         }
 
         // Unten links 2
-        if (row > 3 && col < 6) {
+        if (row > 3 && col < 6 && position.boardRepresentation()[row-3][col+3] == null) {
             allMoves[counter] = Globals.s(row-3)+Globals.s(col+3);
             counter++;
         }

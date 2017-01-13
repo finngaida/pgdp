@@ -31,6 +31,7 @@ public class Snake extends Predator {
         Integer colCache = col-1;
 
         while (rowCache > 0 && colCache > 0) {
+            if (position.boardRepresentation()[rowCache][colCache] != null) { break; }
             allMoves[counter] = Globals.s(rowCache)+colCache;
             counter++;
 
@@ -44,6 +45,7 @@ public class Snake extends Predator {
         colCache = col-1;
 
         while (rowCache < 9 && colCache > 0) {
+            if (position.boardRepresentation()[rowCache][colCache] != null) { break; }
             allMoves[counter] = Globals.s(rowCache)+colCache;
             counter++;
 
@@ -57,6 +59,7 @@ public class Snake extends Predator {
         colCache = col+1;
 
         while (rowCache < 9 && colCache < 9) {
+            if (position.boardRepresentation()[rowCache][colCache] != null) { break; }
             allMoves[counter] = Globals.s(rowCache)+colCache;
             counter++;
 
@@ -70,6 +73,7 @@ public class Snake extends Predator {
         colCache = col+1;
 
         while (rowCache > 0 && colCache < 9) {
+            if (position.boardRepresentation()[rowCache][colCache] != null) { break; }
             allMoves[counter] = Globals.s(rowCache)+colCache;
             counter++;
 

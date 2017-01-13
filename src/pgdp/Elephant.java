@@ -18,14 +18,42 @@ public class Elephant extends Vegetarian {
         int counter = 0;
         Move[] moves = new Move[15];
 
-        for (int i = 0; i < 8; i++) {
-            if (i != row) {
-                moves[counter] = new Move(this.square, Globals.s(i)+col);
+        // nach links
+        for (int i = row-1; i > 0; i--) {
+            if (position.boardRepresentation()[i][col] != null) {
+                break;
+            } else {
+                moves[counter] = new Move(this.square, Globals.s(i) + col);
                 counter++;
             }
+        }
 
-            if (i != col) {
-                moves[counter] = new Move(this.square, ""+this.square.charAt(0)+i);
+        // nach rechts
+        for (int i = row+1; i < 9; i++) {
+            if (position.boardRepresentation()[i][col] != null) {
+                break;
+            } else {
+                moves[counter] = new Move(this.square, Globals.s(i) + col);
+                counter++;
+            }
+        }
+
+        // nach oben
+        for (int i = col-1; i > 0; i--) {
+            if (position.boardRepresentation()[row][i] != null) {
+                break;
+            } else {
+                moves[counter] = new Move(this.square, Globals.s(row)+i);
+                counter++;
+            }
+        }
+
+        // nach unten
+        for (int i = col+1; i < 9; i++) {
+            if (position.boardRepresentation()[row][i] != null) {
+                break;
+            } else {
+                moves[counter] = new Move(this.square, Globals.s(row)+i);
                 counter++;
             }
         }
