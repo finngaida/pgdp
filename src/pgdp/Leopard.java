@@ -7,6 +7,7 @@ public class Leopard extends Predator {
     // verwendet) werden.
     private static int withoutFood = 5;
 
+    public int daysLeft() { return withoutFood; }
 
     /**
      * Dem Konstruktor wird das Geschlecht des Tiers uebergeben.
@@ -16,6 +17,11 @@ public class Leopard extends Predator {
         super(female);
     }
 
+    private int min(int a, int b) {
+        if (a > b) { return b; }
+        else { return a; }
+    }
+
     @Override
     public Move[] possibleMoves() {
 
@@ -23,61 +29,127 @@ public class Leopard extends Predator {
         Integer col = Globals.i(this.square.charAt(1));
 
         // Elephant
-        Elephant peter = new Elephant(female);
-        peter.square = this.square;
-
-        // Diagonalen
         int counter = 0;
-        String[] diagMoves = new String[13];
+        Move[] moves = new Move[15];
 
-        for (int i = 1; i < 7; i++) {
-
-            // To the top left
-            int newRow = row - i;
-            int newCol = col - i;
-            if (newRow > 0 && newCol > 0) {
-                diagMoves[counter] = Globals.s(newRow)+newCol;
+        // nach links
+        for (int i = row-1; i > 0; i--) {
+            if (position.boardRepresentation()[i][col] != null && position.boardRepresentation()[i][col] instanceof Predator) {
+                break;
+            } else {
+                moves[counter] = new Move(this.square, Globals.s(i) + col);
                 counter++;
-            }
-
-            // To the top right
-            newRow = row + i;
-            newCol = col - i;
-            if (newRow < 9 && newCol > 0) {
-                diagMoves[counter] = Globals.s(newRow)+newCol;
-                counter++;
-            }
-
-            // To the bottom right
-            newRow = row + i;
-            newCol = col + i;
-            if (newRow < 9 && newCol < 9) {
-                diagMoves[counter] = Globals.s(newRow)+newCol;
-                counter++;
-            }
-
-            // To the top right
-            newRow = row - i;
-            newCol = col + i;
-            if (newRow > 0 && newCol < 9) {
-                diagMoves[counter] = Globals.s(newRow)+newCol;
-                counter++;
+                if (position.boardRepresentation()[i][col] != null && position.boardRepresentation()[i][col] instanceof Predator) { break; }
             }
         }
 
-        Move[] moves = new Move[counter+peter.possibleMoves().length];
+        // nach rechts
+        for (int i = row+1; i < 9; i++) {
+            if (position.boardRepresentation()[i][col] != null && position.boardRepresentation()[i][col] instanceof Predator) {
+                break;
+            } else {
+                moves[counter] = new Move(this.square, Globals.s(i) + col);
+                counter++;
+                if (position.boardRepresentation()[i][col] != null && position.boardRepresentation()[i][col] instanceof Predator) { break; }
+            }
+        }
+
+        // nach oben
+        for (int i = col-1; i > 0; i--) {
+            if (position.boardRepresentation()[row][i] != null && position.boardRepresentation()[i][col] instanceof Predator) {
+                break;
+            } else {
+                moves[counter] = new Move(this.square, Globals.s(row)+i);
+                counter++;
+                if (position.boardRepresentation()[i][col] != null && position.boardRepresentation()[i][col] instanceof Predator) { break; }
+            }
+        }
+
+        // nach unten
+        for (int i = col+1; i < 9; i++) {
+            if (position.boardRepresentation()[row][i] != null && position.boardRepresentation()[i][col] instanceof Predator) {
+                break;
+            } else {
+                moves[counter] = new Move(this.square, Globals.s(row)+i);
+                counter++;
+                if (position.boardRepresentation()[i][col] != null && position.boardRepresentation()[i][col] instanceof Predator) { break; }
+            }
+        }
+
+        Move[] lessMoves = new Move[counter];
+        for (int i = 0; i < counter; i++) {
+            lessMoves[i] = moves[i];
+        }
+
+        // Diagonalen
+        counter = 0;
+        String[] diagMoves = new String[13];
+
+        // To the top left
+        for (int i = 1; i < min(row,col)+1; i++) {
+            int newRow = row - i;
+            int newCol = col - i;
+            if (position.boardRepresentation()[newRow][newCol] != null && position.boardRepresentation()[newRow][newCol] instanceof Predator) { break; }
+            diagMoves[counter] = Globals.s(newRow) + newCol;
+            counter++;
+            if (position.boardRepresentation()[newRow][newCol] != null && position.boardRepresentation()[newRow][newCol] instanceof Vegetarian) { break; }
+        }
+
+            // To the top right
+        for (int i = 1; i < min(row,col)+1; i++) {
+            int newRow = row + i;
+            int newCol = col - i;
+            if (position.boardRepresentation()[newRow][newCol] != null && position.boardRepresentation()[newRow][newCol] instanceof Predator) {
+                break;
+            }
+            diagMoves[counter] = Globals.s(newRow) + newCol;
+            counter++;
+            if (position.boardRepresentation()[newRow][newCol] != null && position.boardRepresentation()[newRow][newCol] instanceof Vegetarian) {
+                break;
+            }
+        }
+
+            // To the bottom right
+            for (int i = 1; i < min(row,col)+1; i++) {
+                int newRow = row + i;
+                int newCol = col + i;
+                if (position.boardRepresentation()[newRow][newCol] != null && position.boardRepresentation()[newRow][newCol] instanceof Predator) {
+                    break;
+                }
+                diagMoves[counter] = Globals.s(newRow) + newCol;
+                counter++;
+                if (position.boardRepresentation()[newRow][newCol] != null && position.boardRepresentation()[newRow][newCol] instanceof Vegetarian) {
+                    break;
+                }
+            }
+
+        // To the top right
+        for (int i = 1; i < min(row,col)+1; i++) {
+            int newRow = row - i;
+            int newCol = col + i;
+            if (position.boardRepresentation()[newRow][newCol] != null && position.boardRepresentation()[newRow][newCol] instanceof Predator) {
+                break;
+            }
+            diagMoves[counter] = Globals.s(newRow) + newCol;
+            counter++;
+            if (position.boardRepresentation()[newRow][newCol] != null && position.boardRepresentation()[newRow][newCol] instanceof Vegetarian) {
+                break;
+            }
+        }
+
+        Move[] endmoves = new Move[counter+lessMoves.length];
 
         // insert diagonal moves
         for (int i = 0; i < counter; i++) {
-            moves[i] = new Move(this.square, diagMoves[i]);
+            endmoves[i] = new Move(this.square, diagMoves[i]);
         }
 
         // insert straight moves
-        for (int i = counter; i < counter+peter.possibleMoves().length; i++) {
-            moves[i] = peter.possibleMoves()[i];
+        for (int i = counter; i < counter+lessMoves.length; i++) {
+            endmoves[i] = lessMoves[i];
         }
 
-        return moves;
+        return endmoves;
 
     }
 

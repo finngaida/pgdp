@@ -7,6 +7,7 @@ public class Snake extends Predator {
     // verwendet) werden.
     private static int withoutFood = 9;
 
+    public int daysLeft() { return withoutFood; }
 
     /**
      * Dem Konstruktor wird das Geschlecht des Tiers uebergeben.
@@ -31,9 +32,11 @@ public class Snake extends Predator {
         Integer colCache = col-1;
 
         while (rowCache > 0 && colCache > 0) {
-            if (position.boardRepresentation()[rowCache][colCache] != null) { break; }
+            if (position.boardRepresentation()[rowCache][colCache] != null && position.boardRepresentation()[rowCache][colCache] instanceof Predator) { break; }
             allMoves[counter] = Globals.s(rowCache)+colCache;
             counter++;
+
+            if (position.boardRepresentation()[rowCache][colCache] != null && position.boardRepresentation()[rowCache][colCache] instanceof Vegetarian) { break; }
 
             rowCache = row - (left ? 0 : 1);
             colCache = colCache - 1;
@@ -45,9 +48,11 @@ public class Snake extends Predator {
         colCache = col-1;
 
         while (rowCache < 9 && colCache > 0) {
-            if (position.boardRepresentation()[rowCache][colCache] != null) { break; }
+            if (position.boardRepresentation()[rowCache][colCache] != null && position.boardRepresentation()[rowCache][colCache] instanceof Predator) { break; }
             allMoves[counter] = Globals.s(rowCache)+colCache;
             counter++;
+
+            if (position.boardRepresentation()[rowCache][colCache] != null && position.boardRepresentation()[rowCache][colCache] instanceof Vegetarian) { break; }
 
             rowCache = rowCache + 1;
             colCache = col - (left ? 0 : 1);
@@ -59,9 +64,11 @@ public class Snake extends Predator {
         colCache = col+1;
 
         while (rowCache < 9 && colCache < 9) {
-            if (position.boardRepresentation()[rowCache][colCache] != null) { break; }
+            if (position.boardRepresentation()[rowCache][colCache] != null && position.boardRepresentation()[rowCache][colCache] instanceof Predator) { break; }
             allMoves[counter] = Globals.s(rowCache)+colCache;
             counter++;
+
+            if (position.boardRepresentation()[rowCache][colCache] != null && position.boardRepresentation()[rowCache][colCache] instanceof Vegetarian) { break; }
 
             rowCache = row + (left ? 0 : 1);
             colCache = colCache + 1;
@@ -73,9 +80,11 @@ public class Snake extends Predator {
         colCache = col+1;
 
         while (rowCache > 0 && colCache < 9) {
-            if (position.boardRepresentation()[rowCache][colCache] != null) { break; }
+            if (position.boardRepresentation()[rowCache][colCache] != null && position.boardRepresentation()[rowCache][colCache] instanceof Predator) { break; }
             allMoves[counter] = Globals.s(rowCache)+colCache;
             counter++;
+
+            if (position.boardRepresentation()[rowCache][colCache] != null && position.boardRepresentation()[rowCache][colCache] instanceof Vegetarian) { break; }
 
             rowCache = rowCache - 1;
             colCache = col + (left ? 0 : 1);

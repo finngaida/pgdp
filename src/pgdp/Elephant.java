@@ -58,7 +58,12 @@ public class Elephant extends Vegetarian {
             }
         }
 
-        return moves;
+        Move[] lessMoves = new Move[counter];
+        for (int i = 0; i < counter; i++) {
+            lessMoves[i] = moves[i];
+        }
+
+        return lessMoves;
     }
 
     @Override

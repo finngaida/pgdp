@@ -21,6 +21,11 @@ public class Main {
         game.startGame(whoBegins);
 
         while (!game.finished()) {
+
+            // Bisschen Info
+            System.out.println((whoBegins ? "W" : "M") + " ist am Zug. Du hast noch:");
+            System.out.println(game.animalsDescription(whoBegins));
+
             int moveCount = 0;
             String[] moves = new String[4];
             String move = "";
@@ -48,6 +53,7 @@ public class Main {
             }
 
             game.playMoves(realMoves);
+            whoBegins = !whoBegins;
         }
 
         System.out.println("Game Over! " + game.winner() + " gewinnt.");

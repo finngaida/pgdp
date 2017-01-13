@@ -75,4 +75,32 @@ public class Game {
 
         return contains;
     }
+
+    public String animalsDescription(Boolean forW) {
+        int eleCount, horseCount, rabbitCount = 0;
+        String ret = "";
+
+        for (int i = 0; i < pos.animals().length; i++) {
+            Animal a = pos.animals()[i];
+
+            if (a.female == forW) {
+                if (a instanceof Leopard) {
+                    ret = ret + "Leopard (" + ((Leopard) a).daysLeft() + " Tage noch), ";
+                } else if (a instanceof Penguin) {
+                    ret = ret + "Pinguin (" + ((Penguin) a).daysLeft() + " Tage noch), ";
+                } else if (a instanceof Snake) {
+                    ret = ret + "Schlange (" + ((Snake) a).daysLeft() + " Tage noch), ";
+                } else if (a instanceof Elephant) {
+                    eleCount++;
+                } else if (a instanceof Horse) {
+                    horseCount++;
+                } else if (a instanceof Rabbit) {
+                    rabbitCount++;
+                }
+            }
+        }
+
+        ret = ret + eleCount + " Elefanten, " + horseCount + " Pferde, " + rabbitCount + " Kaninchen";
+        return ret;
+    }
 }

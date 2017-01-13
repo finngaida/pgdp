@@ -22,6 +22,10 @@ public class Position {
     private Animal[] myAnimals;
     private int nrAnimals;
 
+    public Animal[] animals() {
+        return myAnimals;
+    }
+
     /**
      * Spieler, der als naechstes ziehen darf ('M' oder 'W').
      * Wird jedes Mal aktualisiert, wenn eine Seite ihre Zuege ausfuehrt.
@@ -165,7 +169,45 @@ public class Position {
      *
      */
     public void applyMoves(Move[] move){
-        //TODO
+
+        for (int i = 0; i < move.length; i++) {
+            int fromRow = Globals.i(move[i].toString().charAt(0));
+            int fromCol = Globals.i(move[i].toString().charAt(1));
+            int toRow = Globals.i(move[i].toString().charAt(2));
+            int toCol = Globals.i(move[i].toString().charAt(3));
+
+            Animal actor = boardRepresentation()[fromRow][fromCol];
+
+            // check for eating
+            if (actor instanceof Predator && boardRepresentation()[toRow][toCol] != null && boardRepresentation()[toRow][toCol] instanceof Vegetarian) {
+                // kill the animal that was there before
+                Animal killed = boardRepresentation()[toRow][toCol];
+                int index = -1;
+                for (int j = 0; j < nrAnimals; j++) {
+                    if (myAnimals[j].equals(killed)) {
+                        index = j;
+                        break;
+                    }
+                }
+
+                if (index > -1) {
+                    Animal[] newAnimalsArray = new Animal[nrAnimals - 1];
+                    for (int j = 0; j < nrAnimals; j++) {
+                        if (j < index) {
+                            newAnimalsArray[j] = myAnimals[j];
+                        } else {
+                            newAnimalsArray[j] = myAnimals[j+1];
+                        }
+                    }
+                    nrAnimals--;
+                }
+            }
+
+            // and then move
+            actor.square = Globals.s(toRow) + toCol;
+        }
+
+        next = (next == 'W' ? 'M' : 'W');
     }
 
 

@@ -7,6 +7,7 @@ public class Penguin extends Predator {
     // verwendet) werden.
     private static int withoutFood = 12;
 
+    public int daysLeft() { return withoutFood; }
 
     /**
      * Dem Konstruktor wird das Geschlecht des Tiers uebergeben.
@@ -36,15 +37,15 @@ public class Penguin extends Predator {
         int count = 0;
 
         if (row > 1) {
-            if (col > 1 && position.boardRepresentation()[leftI][top] == null) {
+            if (col > 1 && (position.boardRepresentation()[leftI][top] == null || position.boardRepresentation()[leftI][top] instanceof Vegetarian)) {
                 allMoves[count] = left + top;
             }
 
-            if (position.boardRepresentation()[leftI][col] == null){
+            if (position.boardRepresentation()[leftI][col] == null || position.boardRepresentation()[leftI][col] instanceof Vegetarian){
                 allMoves[count + 1] = left + col;
             }
 
-            if (col < 9 && position.boardRepresentation()[leftI][bottom] == null) {
+            if (col < 9 && (position.boardRepresentation()[leftI][bottom] == null || position.boardRepresentation()[leftI][bottom] instanceof Vegetarian)) {
                 allMoves[count + 2] = left + bottom;
             }
 
@@ -52,27 +53,27 @@ public class Penguin extends Predator {
         }
 
         if (row < 8) {
-            if (col > 1 && position.boardRepresentation()[rightI][top] == null) {
+            if (col > 1 && (position.boardRepresentation()[rightI][top] == null || position.boardRepresentation()[rightI][top] instanceof Vegetarian)) {
                 allMoves[count] = right + top;
             }
 
-            if (position.boardRepresentation()[rightI][col] == null){
+            if (position.boardRepresentation()[rightI][col] == null || position.boardRepresentation()[rightI][col] instanceof Vegetarian) {
                 allMoves[count + 1] = right + col;
             }
 
-            if (col < 9 && position.boardRepresentation()[rightI][bottom] == null) {
+            if (col < 9 && (position.boardRepresentation()[rightI][bottom] == null || position.boardRepresentation()[rightI][bottom] instanceof Vegetarian)) {
                 allMoves[count + 2] = right + bottom;
             }
 
             count = count+3;
         }
 
-        if (col > 1 && position.boardRepresentation()[centerI][top] == null) {
+        if (col > 1 && (position.boardRepresentation()[centerI][top] == null || position.boardRepresentation()[centerI][top] instanceof Vegetarian)) {
             allMoves[count+1] = center+top;
             count++;
         }
 
-        if (col < 8 && position.boardRepresentation()[centerI][bottom] == null) {
+        if (col < 8 && (position.boardRepresentation()[centerI][bottom] == null || position.boardRepresentation()[centerI][bottom] instanceof Vegetarian)) {
             allMoves[count+1] = center+bottom;
             count++;
         }
