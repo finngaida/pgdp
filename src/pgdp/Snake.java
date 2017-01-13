@@ -18,7 +18,73 @@ public class Snake extends Predator {
 
     @Override
     public Move[] possibleMoves() {
-        return super.possibleMoves();
+
+        Integer row = Globals.i(this.square.charAt(0));
+        Integer col = Globals.i(this.square.charAt(1));
+
+        String[] allMoves = new String[14];
+        Integer counter = 0;
+        boolean left = true;
+
+        // nach oben links
+        Integer rowCache = row-1;
+        Integer colCache = col-1;
+
+        while (rowCache > 0 && colCache > 0) {
+            allMoves[counter] = Globals.s(rowCache)+colCache;
+            counter++;
+
+            rowCache = row - (left ? 0 : 1);
+            colCache = colCache - 1;
+            left = !left;
+        }
+
+        // nach oben rechts
+        rowCache = row+1;
+        colCache = col-1;
+
+        while (rowCache < 9 && colCache > 0) {
+            allMoves[counter] = Globals.s(rowCache)+colCache;
+            counter++;
+
+            rowCache = rowCache + 1;
+            colCache = col - (left ? 0 : 1);
+            left = !left;
+        }
+
+        // nach unten rechts
+        rowCache = row+1;
+        colCache = col+1;
+
+        while (rowCache < 9 && colCache < 9) {
+            allMoves[counter] = Globals.s(rowCache)+colCache;
+            counter++;
+
+            rowCache = row + (left ? 0 : 1);
+            colCache = colCache + 1;
+            left = !left;
+        }
+
+        // nach unten links
+        rowCache = row-1;
+        colCache = col+1;
+
+        while (rowCache > 0 && colCache < 9) {
+            allMoves[counter] = Globals.s(rowCache)+colCache;
+            counter++;
+
+            rowCache = rowCache - 1;
+            colCache = col + (left ? 0 : 1);
+            left = !left;
+        }
+
+        Move[] moves = new Move[counter];
+
+        for (int i = 0; i < counter; i++) {
+            moves[i] = new Move(this.square, allMoves[i]);
+        }
+
+        return moves;
     }
 
     @Override

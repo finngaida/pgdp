@@ -18,7 +18,63 @@ public class Penguin extends Predator {
 
     @Override
     public Move[] possibleMoves() {
-        return super.possibleMoves();
+        Integer row = Globals.i(this.square.charAt(0));
+        Integer col = Globals.i(this.square.charAt(1));
+
+        String left = Globals.s(row-1);
+        String center = Globals.s(row);
+        String right = Globals.s(row+1);
+
+        Integer top = col-1;
+        Integer bottom = col+1;
+
+        String[] allMoves = new String[8];
+        int count = 0;
+
+        if (row > 1) {
+            if (col > 1) {
+                allMoves[count] = left + top;
+            }
+
+            allMoves[count+1] = left+col;
+
+            if (col < 9) {
+                allMoves[count + 2] = left + bottom;
+            }
+
+            count = count+3;
+        }
+
+        if (row < 8) {
+            if (col > 1) {
+                allMoves[count] = right + top;
+            }
+
+            allMoves[count+1] = right+col;
+
+            if (col < 9) {
+                allMoves[count + 2] = right + bottom;
+            }
+
+            count = count+3;
+        }
+
+        if (col > 1) {
+            allMoves[count+1] = center+top;
+            count++;
+        }
+
+        if (col < 8) {
+            allMoves[count+1] = center+bottom;
+            count++;
+        }
+
+        Move[] moves = new Move[count];
+        for (int i = 0; i < count; i++) {
+            moves[i] = new Move(this.square, allMoves[i]);
+        }
+
+        return moves;
     }
 
     @Override

@@ -12,7 +12,9 @@ public class Rabbit extends Vegetarian {
 
     @Override
     public Move[] possibleMoves() {
-        return super.possibleMoves();
+        Penguin karl = new Penguin(this.female);
+        karl.square = this.square;
+        return karl.possibleMoves();
     }
 
     @Override

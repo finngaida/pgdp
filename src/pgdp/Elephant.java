@@ -12,7 +12,25 @@ public class Elephant extends Vegetarian {
 
     @Override
     public Move[] possibleMoves() {
-        return super.possibleMoves();
+        Integer row = Globals.i(this.square.charAt(0));
+        Integer col = Globals.i(this.square.charAt(1));
+
+        int counter = 0;
+        Move[] moves = new Move[15];
+
+        for (int i = 0; i < 8; i++) {
+            if (i != row) {
+                moves[counter] = new Move(this.square, Globals.s(i)+col);
+                counter++;
+            }
+
+            if (i != col) {
+                moves[counter] = new Move(this.square, ""+this.square.charAt(0)+i);
+                counter++;
+            }
+        }
+
+        return moves;
     }
 
     @Override
