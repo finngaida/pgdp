@@ -29,65 +29,65 @@ public class Snake extends Predator {
 
         // nach oben links
         Integer rowCache = row-1;
-        Integer colCache = col-1;
+        Integer colCache = col+1;
 
-        while (rowCache > 0 && colCache > 0) {
+        while (rowCache >= 0 && colCache < 8) {
             if (position.boardRepresentation()[rowCache][colCache] != null && position.boardRepresentation()[rowCache][colCache] instanceof Predator) { break; }
-            allMoves[counter] = Globals.s(rowCache)+colCache;
+            allMoves[counter] = Globals.s(rowCache)+(colCache+1);
             counter++;
 
             if (position.boardRepresentation()[rowCache][colCache] != null && position.boardRepresentation()[rowCache][colCache] instanceof Vegetarian) { break; }
 
             rowCache = row - (left ? 0 : 1);
-            colCache = colCache - 1;
+            colCache = colCache + 1;
             left = !left;
         }
 
         // nach oben rechts
         rowCache = row+1;
-        colCache = col-1;
+        colCache = col+1;
 
-        while (rowCache < 9 && colCache > 0) {
+        while (rowCache < 8 && colCache < 8) {
             if (position.boardRepresentation()[rowCache][colCache] != null && position.boardRepresentation()[rowCache][colCache] instanceof Predator) { break; }
-            allMoves[counter] = Globals.s(rowCache)+colCache;
+            allMoves[counter] = Globals.s(rowCache)+(colCache+1);
             counter++;
 
             if (position.boardRepresentation()[rowCache][colCache] != null && position.boardRepresentation()[rowCache][colCache] instanceof Vegetarian) { break; }
 
             rowCache = rowCache + 1;
-            colCache = col - (left ? 0 : 1);
+            colCache = colCache + (left ? 0 : 1);
             left = !left;
         }
 
         // nach unten rechts
         rowCache = row+1;
-        colCache = col+1;
+        colCache = col-1;
 
-        while (rowCache < 9 && colCache < 9) {
+        while (rowCache < 8 && colCache >= 0) {
             if (position.boardRepresentation()[rowCache][colCache] != null && position.boardRepresentation()[rowCache][colCache] instanceof Predator) { break; }
-            allMoves[counter] = Globals.s(rowCache)+colCache;
+            allMoves[counter] = Globals.s(rowCache)+(colCache+1);
             counter++;
 
             if (position.boardRepresentation()[rowCache][colCache] != null && position.boardRepresentation()[rowCache][colCache] instanceof Vegetarian) { break; }
 
             rowCache = row + (left ? 0 : 1);
-            colCache = colCache + 1;
+            colCache = colCache - 1;
             left = !left;
         }
 
         // nach unten links
         rowCache = row-1;
-        colCache = col+1;
+        colCache = col-1;
 
-        while (rowCache > 0 && colCache < 9) {
+        while (rowCache >= 0 && colCache >= 0) {
             if (position.boardRepresentation()[rowCache][colCache] != null && position.boardRepresentation()[rowCache][colCache] instanceof Predator) { break; }
-            allMoves[counter] = Globals.s(rowCache)+colCache;
+            allMoves[counter] = Globals.s(rowCache)+(colCache+1);
             counter++;
 
             if (position.boardRepresentation()[rowCache][colCache] != null && position.boardRepresentation()[rowCache][colCache] instanceof Vegetarian) { break; }
 
             rowCache = rowCache - 1;
-            colCache = col + (left ? 0 : 1);
+            colCache = colCache - (left ? 0 : 1);
             left = !left;
         }
 
@@ -102,7 +102,10 @@ public class Snake extends Predator {
 
     @Override
     public void sunset() {
-        super.sunset();
+        withoutFood--;
+        if (withoutFood < 0) {
+            position.kill(Globals.i(square.charAt(0)), Globals.i(square.charAt(1)));
+        }
     }
 
     @Override

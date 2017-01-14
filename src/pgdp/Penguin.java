@@ -96,7 +96,10 @@ public class Penguin extends Predator {
 
     @Override
     public void sunset() {
-        super.sunset();
+        withoutFood--;
+        if (withoutFood < 0) {
+            position.kill(Globals.i(square.charAt(0)), Globals.i(square.charAt(1)));
+        }
     }
 
     @Override

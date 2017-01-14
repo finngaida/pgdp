@@ -19,41 +19,41 @@ public class Elephant extends Vegetarian {
         Move[] moves = new Move[15];
 
         // nach links
-        for (int i = row-1; i > 0; i--) {
+        for (int i = row-1; i >= 0; i--) {
             if (position.boardRepresentation()[i][col] != null) {
                 break;
             } else {
-                moves[counter] = new Move(this.square, Globals.s(i) + col);
+                moves[counter] = new Move(this.square, Globals.s(i) + (col+1));
                 counter++;
             }
         }
 
         // nach rechts
-        for (int i = row+1; i < 9; i++) {
+        for (int i = row+1; i < 8; i++) {
             if (position.boardRepresentation()[i][col] != null) {
                 break;
             } else {
-                moves[counter] = new Move(this.square, Globals.s(i) + col);
-                counter++;
-            }
-        }
-
-        // nach oben
-        for (int i = col-1; i > 0; i--) {
-            if (position.boardRepresentation()[row][i] != null) {
-                break;
-            } else {
-                moves[counter] = new Move(this.square, Globals.s(row)+i);
+                moves[counter] = new Move(this.square, Globals.s(i) + (col+1));
                 counter++;
             }
         }
 
         // nach unten
+        for (int i = col-1; i >= 0; i--) {
+            if (position.boardRepresentation()[row][i] != null) {
+                break;
+            } else {
+                moves[counter] = new Move(this.square, Globals.s(row)+(i+1));
+                counter++;
+            }
+        }
+
+        // nach oben
         for (int i = col+1; i < 9; i++) {
             if (position.boardRepresentation()[row][i] != null) {
                 break;
             } else {
-                moves[counter] = new Move(this.square, Globals.s(row)+i);
+                moves[counter] = new Move(this.square, Globals.s(row)+(i+1));
                 counter++;
             }
         }
@@ -64,11 +64,6 @@ public class Elephant extends Vegetarian {
         }
 
         return lessMoves;
-    }
-
-    @Override
-    public void sunset() {
-        super.sunset();
     }
 
     @Override

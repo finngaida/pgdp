@@ -183,33 +183,13 @@ public class Position {
             // check for eating
             if (actor instanceof Predator && boardRepresentation()[toRow][toCol] != null && boardRepresentation()[toRow][toCol] instanceof Vegetarian) {
                 // kill the animal that was there before
-                Animal killed = boardRepresentation()[toRow][toCol];
-                int index = -1;
-                for (int j = 0; j < nrAnimals; j++) {
-                    if (myAnimals[j].equals(killed)) {
-                        index = j;
-                        break;
-                    }
-                }
-
-                if (index > -1) {
-                    Animal[] newAnimalsArray = new Animal[nrAnimals - 1];
-                    for (int j = 0; j < nrAnimals-1; j++) {
-                        if (j < index) {
-                            newAnimalsArray[j] = myAnimals[j];
-                        } else {
-                            newAnimalsArray[j] = myAnimals[j+1];
-                        }
-                    }
-                    nrAnimals--;
-                    myAnimals = newAnimalsArray;
-                }
+                kill(toRow, toCol);
             }
 
             // and then move
             try {
                 actor.setSquare(Globals.s(toRow) + toCol);
-            } catch (Exception e) {
+            } catch (NullPointerException e) {
                 System.out.println("[DEBUG]: exception: " + e);
             }
 
@@ -217,6 +197,30 @@ public class Position {
         }
 
         next = (next == 'W' ? 'M' : 'W');
+    }
+
+    public void kill(Integer row, Integer col) {
+        Animal killed = boardRepresentation()[row][col];
+        int index = -1;
+        for (int j = 0; j < nrAnimals; j++) {
+            if (myAnimals[j].equals(killed)) {
+                index = j;
+                break;
+            }
+        }
+
+        if (index > -1) {
+            Animal[] newAnimalsArray = new Animal[nrAnimals - 1];
+            for (int j = 0; j < nrAnimals-1; j++) {
+                if (j < index) {
+                    newAnimalsArray[j] = myAnimals[j];
+                } else {
+                    newAnimalsArray[j] = myAnimals[j+1];
+                }
+            }
+            nrAnimals--;
+            myAnimals = newAnimalsArray;
+        }
     }
 
 
@@ -321,7 +325,7 @@ public class Position {
             }
             str += " " + i + "\n";
         }
-        str += "  a b c d e f g h\nIt is " + next + "'s turn.\n";
+        str += "   a b c d e f g h\nIt is " + next + "'s turn.\n";
         return str;
     }
 

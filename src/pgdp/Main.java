@@ -34,7 +34,7 @@ public class Main {
                 // erstmal einen Zug einholen
                 while (!game.validMove(move)) {
                     move = IO.readString((whoBegins ? "W" : "M") + ": (Zug " + (moveCount + 1) + " von 4) Gib einen Zug im Format 'a2a3' ein. (oder 'pass' falls du nicht mehr ziehen möchtest)");
-                    System.out.println("[DEBUG]: got move: " + move + "valid: " + game.validMove(move));
+                    System.out.println("[DEBUG]: got move: " + move + " valid: " + game.validMove(move));
                 }
 
                 // Abbruchfall

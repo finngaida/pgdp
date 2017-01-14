@@ -23,51 +23,54 @@ public class Rabbit extends Vegetarian {
         Integer centerI = row;
         Integer rightI = row+1;
 
-        Integer top = col-1;
-        Integer bottom = col+1;
+        String top = ""+(col+2);
+        String bottom = ""+col;
+
+        Integer topI = col+1;
+        Integer bottomI = col-1;
 
         String[] allMoves = new String[8];
         int count = 0;
 
         if (row > 1) {
-            if (col > 1 && position.boardRepresentation()[leftI][top] == null) {
+            if (col < 7 && position.boardRepresentation()[leftI][topI] == null) {
                 allMoves[count] = left + top;
+                count++;
             }
 
             if (position.boardRepresentation()[leftI][col] == null) {
-                allMoves[count + 1] = left + col;
+                allMoves[count] = left + (col+1);
+                count++;
             }
 
-            if (col < 9 && position.boardRepresentation()[leftI][bottom] == null) {
-                allMoves[count + 2] = left + bottom;
+            if (col > 0 && position.boardRepresentation()[leftI][bottomI] == null) {
+                allMoves[count] = left + bottom;
+                count++;
             }
-
-            count = count+3;
         }
 
-        if (row < 8) {
-            if (col > 1 && position.boardRepresentation()[rightI][top] == null) {
+        if (row < 7) {
+            if (col < 7 && position.boardRepresentation()[rightI][topI] == null) {
                 allMoves[count] = right + top;
+                count++;
             }
 
             if (position.boardRepresentation()[rightI][col] == null){
-                allMoves[count + 1] = right + col;
+                allMoves[count] = right + (col+1);
             }
 
-            if (col < 9 && position.boardRepresentation()[rightI][bottom] == null) {
-                allMoves[count + 2] = right + bottom;
+            if (col > 0 && position.boardRepresentation()[rightI][bottomI] == null) {
+                allMoves[count] = right + bottom;
             }
-
-            count = count+3;
         }
 
-        if (col > 1 && position.boardRepresentation()[centerI][top] == null) {
-            allMoves[count+1] = center+top;
+        if (col < 7 && position.boardRepresentation()[centerI][topI] == null) {
+            allMoves[count] = center+top;
             count++;
         }
 
-        if (col < 8 && position.boardRepresentation()[centerI][bottom] == null) {
-            allMoves[count+1] = center+bottom;
+        if (col > 0 && position.boardRepresentation()[centerI][bottomI] == null) {
+            allMoves[count] = center+bottom;
             count++;
         }
 
@@ -77,11 +80,6 @@ public class Rabbit extends Vegetarian {
         }
 
         return moves;
-    }
-
-    @Override
-    public void sunset() {
-        super.sunset();
     }
 
     @Override
