@@ -30,56 +30,64 @@ public class Penguin extends Predator {
         Integer centerI = row;
         Integer rightI = row+1;
 
-        Integer top = col-1;
-        Integer bottom = col+1;
+        String top = ""+(col+2);
+        String bottom = ""+col;
+
+        Integer topI = col+1;
+        Integer bottomI = col-1;
 
         String[] allMoves = new String[8];
         int count = 0;
 
-        if (row > 1) {
-            if (col > 1 && (position.boardRepresentation()[leftI][top] == null || position.boardRepresentation()[leftI][top] instanceof Vegetarian)) {
+        System.out.println("[DEBUG]: row: " + row + ", col: " + col);
+
+        if (row > 0) {
+            if (col < 7 && (position.boardRepresentation()[leftI][topI] == null || position.boardRepresentation()[leftI][topI] instanceof Vegetarian)) {
                 allMoves[count] = left + top;
+                count++;
             }
 
             if (position.boardRepresentation()[leftI][col] == null || position.boardRepresentation()[leftI][col] instanceof Vegetarian){
-                allMoves[count + 1] = left + col;
+                allMoves[count] = left + (col+1);
+                count++;
             }
 
-            if (col < 9 && (position.boardRepresentation()[leftI][bottom] == null || position.boardRepresentation()[leftI][bottom] instanceof Vegetarian)) {
-                allMoves[count + 2] = left + bottom;
+            if (col > 0 && (position.boardRepresentation()[leftI][bottomI] == null || position.boardRepresentation()[leftI][bottomI] instanceof Vegetarian)) {
+                allMoves[count] = left + bottom;
+                count++;
             }
-
-            count = count+3;
         }
 
-        if (row < 8) {
-            if (col > 1 && (position.boardRepresentation()[rightI][top] == null || position.boardRepresentation()[rightI][top] instanceof Vegetarian)) {
+        if (row < 7) {
+            if (col < 7 && (position.boardRepresentation()[rightI][topI] == null || position.boardRepresentation()[rightI][topI] instanceof Vegetarian)) {
                 allMoves[count] = right + top;
+                count++;
             }
 
             if (position.boardRepresentation()[rightI][col] == null || position.boardRepresentation()[rightI][col] instanceof Vegetarian) {
-                allMoves[count + 1] = right + col;
+                allMoves[count] = right + (col+1);
+                count++;
             }
 
-            if (col < 9 && (position.boardRepresentation()[rightI][bottom] == null || position.boardRepresentation()[rightI][bottom] instanceof Vegetarian)) {
-                allMoves[count + 2] = right + bottom;
+            if (col > 0 && (position.boardRepresentation()[rightI][bottomI] == null || position.boardRepresentation()[rightI][bottomI] instanceof Vegetarian)) {
+                allMoves[count] = right + bottom;
+                count++;
             }
-
-            count = count+3;
         }
 
-        if (col > 1 && (position.boardRepresentation()[centerI][top] == null || position.boardRepresentation()[centerI][top] instanceof Vegetarian)) {
-            allMoves[count+1] = center+top;
+        if (col < 7 && (position.boardRepresentation()[centerI][topI] == null || position.boardRepresentation()[centerI][topI] instanceof Vegetarian)) {
+            allMoves[count] = center+top;
             count++;
         }
 
-        if (col < 8 && (position.boardRepresentation()[centerI][bottom] == null || position.boardRepresentation()[centerI][bottom] instanceof Vegetarian)) {
-            allMoves[count+1] = center+bottom;
+        if (col > 0 && (position.boardRepresentation()[centerI][bottomI] == null || position.boardRepresentation()[centerI][bottomI] instanceof Vegetarian)) {
+            allMoves[count] = center+bottom;
             count++;
         }
 
         Move[] moves = new Move[count];
         for (int i = 0; i < count; i++) {
+            //System.out.println("[DEBUG] penguin move: " + allMoves[i]);
             moves[i] = new Move(this.square, allMoves[i]);
         }
 

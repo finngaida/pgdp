@@ -32,8 +32,9 @@ public class Main {
             while (moveCount < 4) {
 
                 // erstmal einen Zug einholen
-                while (!move.equals("pass") || !game.validMove(move)) {
+                while (!game.validMove(move)) {
                     move = IO.readString((whoBegins ? "W" : "M") + ": (Zug " + (moveCount + 1) + " von 4) Gib einen Zug im Format 'a2a3' ein. (oder 'pass' falls du nicht mehr ziehen möchtest)");
+                    System.out.println("[DEBUG]: got move: " + move + "valid: " + game.validMove(move));
                 }
 
                 // Abbruchfall
@@ -54,6 +55,8 @@ public class Main {
 
             game.playMoves(realMoves);
             whoBegins = !whoBegins;
+
+            game.printBoard();
         }
 
         System.out.println("Game Over! " + game.winner() + " gewinnt.");

@@ -1,5 +1,7 @@
 package pgdp;
 
+import java.util.Arrays;
+
 /**
  * Die Klasse Position repraesentiert eine Spielsituation.
  *
@@ -192,7 +194,7 @@ public class Position {
 
                 if (index > -1) {
                     Animal[] newAnimalsArray = new Animal[nrAnimals - 1];
-                    for (int j = 0; j < nrAnimals; j++) {
+                    for (int j = 0; j < nrAnimals-1; j++) {
                         if (j < index) {
                             newAnimalsArray[j] = myAnimals[j];
                         } else {
@@ -200,11 +202,18 @@ public class Position {
                         }
                     }
                     nrAnimals--;
+                    myAnimals = newAnimalsArray;
                 }
             }
 
             // and then move
-            actor.square = Globals.s(toRow) + toCol;
+            try {
+                actor.setSquare(Globals.s(toRow) + toCol);
+            } catch (Exception e) {
+                System.out.println("[DEBUG]: exception: " + e);
+            }
+
+            System.out.println("[DEBUG]: moving " + actor + " from " + fromRow + ", " + fromCol + " to " + toRow + ", " + toCol + " and as string: " + Globals.s(toRow) + (toCol+1));
         }
 
         next = (next == 'W' ? 'M' : 'W');

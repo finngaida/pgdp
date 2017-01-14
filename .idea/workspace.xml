@@ -2,14 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17ccd7aa-99da-43a4-ae36-be68dd747eee" name="Default" comment="implement `reset` to create the initial position">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pgdp/Elephant.java" afterPath="$PROJECT_DIR$/src/pgdp/Elephant.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Kampf/pgdp/Animal.class" afterPath="$PROJECT_DIR$/out/production/Kampf/pgdp/Animal.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Kampf/pgdp/Game.class" afterPath="$PROJECT_DIR$/out/production/Kampf/pgdp/Game.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Kampf/pgdp/Globals.class" afterPath="$PROJECT_DIR$/out/production/Kampf/pgdp/Globals.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Kampf/pgdp/Leopard.class" afterPath="$PROJECT_DIR$/out/production/Kampf/pgdp/Leopard.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Kampf/pgdp/Main.class" afterPath="$PROJECT_DIR$/out/production/Kampf/pgdp/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Kampf/pgdp/Move.class" afterPath="$PROJECT_DIR$/out/production/Kampf/pgdp/Move.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Kampf/pgdp/Penguin.class" afterPath="$PROJECT_DIR$/out/production/Kampf/pgdp/Penguin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Kampf/pgdp/Position.class" afterPath="$PROJECT_DIR$/out/production/Kampf/pgdp/Position.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Kampf/pgdp/Snake.class" afterPath="$PROJECT_DIR$/out/production/Kampf/pgdp/Snake.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pgdp/Animal.java" afterPath="$PROJECT_DIR$/src/pgdp/Animal.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pgdp/Game.java" afterPath="$PROJECT_DIR$/src/pgdp/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pgdp/Leopard.java" afterPath="$PROJECT_DIR$/src/pgdp/Leopard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pgdp/Globals.java" afterPath="$PROJECT_DIR$/src/pgdp/Globals.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pgdp/Main.java" afterPath="$PROJECT_DIR$/src/pgdp/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pgdp/Move.java" afterPath="$PROJECT_DIR$/src/pgdp/Move.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pgdp/Penguin.java" afterPath="$PROJECT_DIR$/src/pgdp/Penguin.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pgdp/Position.java" afterPath="$PROJECT_DIR$/src/pgdp/Position.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pgdp/Rabbit.java" afterPath="$PROJECT_DIR$/src/pgdp/Rabbit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pgdp/Snake.java" afterPath="$PROJECT_DIR$/src/pgdp/Snake.java" />
     </list>
     <ignored path="Kampf.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,11 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pgdp/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="26" column="67" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
+            <state relative-caret-position="403">
+              <caret line="58" column="12" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -44,8 +53,18 @@
       <file leaf-file-name="Penguin.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pgdp/Penguin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+            <state relative-caret-position="45">
+              <caret line="82" column="131" selection-start-line="82" selection-start-column="131" selection-end-line="82" selection-end-column="131" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Globals.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pgdp/Globals.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="33">
+              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -64,36 +83,12 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pgdp/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="99" column="13" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
+            <state relative-caret-position="183">
+              <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
               <folding>
-                <element signature="e#935#936#0" expanded="true" />
-                <element signature="e#980#981#0" expanded="true" />
-                <element signature="e#1008#1009#0" expanded="true" />
-                <element signature="e#1046#1047#0" expanded="true" />
-                <element signature="e#1089#1090#0" expanded="true" />
-                <element signature="e#1126#1127#0" expanded="true" />
+                <element signature="e#1174#1175#0" expanded="true" />
+                <element signature="e#1211#1212#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Horse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pgdp/Horse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="90" column="22" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Leopard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pgdp/Leopard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -108,15 +103,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Position.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Position.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pgdp/Position.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-              <folding>
-                <element signature="e#910#911#0" expanded="true" />
-                <element signature="e#942#943#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="213">
+              <caret line="212" column="63" selection-start-line="212" selection-start-column="63" selection-end-line="212" selection-end-column="63" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -124,19 +116,100 @@
       <file leaf-file-name="Animal.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pgdp/Animal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="210">
+              <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Elephant.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pgdp/Elephant.java">
+      <file leaf-file-name="Move.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pgdp/Move.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
+            <state relative-caret-position="256">
+              <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="String.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/src.zip!/java/lang/String.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9090">
+              <caret line="657" column="0" selection-start-line="657" selection-start-column="0" selection-end-line="657" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#122414#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#4846#4847#0" expanded="false" />
+                <element signature="e#4886#4887#0" expanded="false" />
+                <element signature="e#5859#5860#0" expanded="false" />
+                <element signature="e#5922#5923#0" expanded="false" />
+                <element signature="e#12931#12932#0" expanded="false" />
+                <element signature="e#12983#12984#0" expanded="false" />
+                <element signature="e#18614#18615#0" expanded="false" />
+                <element signature="e#18667#18668#0" expanded="false" />
+                <element signature="e#20560#20561#0" expanded="false" />
+                <element signature="e#20604#20605#0" expanded="false" />
+                <element signature="e#21794#21795#0" expanded="false" />
+                <element signature="e#21874#21875#0" expanded="false" />
+                <element signature="e#22493#22494#0" expanded="false" />
+                <element signature="e#22535#22536#0" expanded="false" />
+                <element signature="e#22850#22851#0" expanded="false" />
+                <element signature="e#22885#22886#0" expanded="false" />
+                <element signature="e#23141#23142#0" expanded="false" />
+                <element signature="e#23181#23182#0" expanded="false" />
+                <element signature="e#29826#29827#0" expanded="false" />
+                <element signature="e#29897#29898#0" expanded="false" />
+                <element signature="e#36782#36783#0" expanded="false" />
+                <element signature="e#36848#36849#0" expanded="false" />
+                <element signature="e#47408#47409#0" expanded="false" />
+                <element signature="e#47472#47473#0" expanded="false" />
+                <element signature="e#55768#55769#0" expanded="false" />
+                <element signature="e#55812#55813#0" expanded="false" />
+                <element signature="e#56425#56426#0" expanded="false" />
+                <element signature="e#56502#56503#0" expanded="false" />
+                <element signature="e#58524#58525#0" expanded="false" />
+                <element signature="e#58561#58562#0" expanded="false" />
+                <element signature="e#62972#62973#0" expanded="false" />
+                <element signature="e#63028#63029#0" expanded="false" />
+                <element signature="e#66593#66594#0" expanded="false" />
+                <element signature="e#66631#66632#0" expanded="false" />
+                <element signature="e#70089#70090#0" expanded="false" />
+                <element signature="e#70142#70143#0" expanded="false" />
+                <element signature="e#76845#76846#0" expanded="false" />
+                <element signature="e#76904#76905#0" expanded="false" />
+                <element signature="e#81336#81337#0" expanded="false" />
+                <element signature="e#81387#81388#0" expanded="false" />
+                <element signature="e#81771#81772#0" expanded="false" />
+                <element signature="e#81820#81821#0" expanded="false" />
+                <element signature="e#93265#93266#0" expanded="false" />
+                <element signature="e#93303#93304#0" expanded="false" />
+                <element signature="e#100216#100217#0" expanded="false" />
+                <element signature="e#100271#100272#0" expanded="false" />
+                <element signature="e#106802#106803#0" expanded="false" />
+                <element signature="e#106857#106858#0" expanded="false" />
+                <element signature="e#108993#108994#0" expanded="false" />
+                <element signature="e#109020#109021#0" expanded="false" />
+                <element signature="e#113752#113753#0" expanded="false" />
+                <element signature="e#113814#113815#0" expanded="false" />
+                <element signature="e#114321#114322#0" expanded="false" />
+                <element signature="e#114360#114361#0" expanded="false" />
+                <element signature="e#115506#115507#0" expanded="false" />
+                <element signature="e#115560#115561#0" expanded="false" />
+                <element signature="e#116474#116475#0" expanded="false" />
+                <element signature="e#116513#116514#0" expanded="false" />
+                <element signature="e#116906#116907#0" expanded="false" />
+                <element signature="e#116949#116950#0" expanded="false" />
+                <element signature="e#117784#117785#0" expanded="false" />
+                <element signature="e#117826#117827#0" expanded="false" />
+                <element signature="e#118261#118262#0" expanded="false" />
+                <element signature="e#118300#118301#0" expanded="false" />
+                <element signature="e#118742#118743#0" expanded="false" />
+                <element signature="e#118782#118783#0" expanded="false" />
+                <element signature="e#119232#119233#0" expanded="false" />
+                <element signature="e#119273#119274#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,18 +236,18 @@
         <option value="$PROJECT_DIR$/src/pgdp/IO.java" />
         <option value="$PROJECT_DIR$/src/pgdp/Predator.java" />
         <option value="$PROJECT_DIR$/src/pgdp/Vegetarian.java" />
-        <option value="$PROJECT_DIR$/src/pgdp/Animal.java" />
-        <option value="$PROJECT_DIR$/src/pgdp/Move.java" />
-        <option value="$PROJECT_DIR$/src/pgdp/Globals.java" />
         <option value="$PROJECT_DIR$/src/pgdp/Horse.java" />
         <option value="$PROJECT_DIR$/src/pgdp/Rabbit.java" />
         <option value="$PROJECT_DIR$/src/pgdp/Elephant.java" />
-        <option value="$PROJECT_DIR$/src/pgdp/Position.java" />
         <option value="$PROJECT_DIR$/src/pgdp/Leopard.java" />
-        <option value="$PROJECT_DIR$/src/pgdp/Penguin.java" />
         <option value="$PROJECT_DIR$/src/pgdp/Snake.java" />
+        <option value="$PROJECT_DIR$/src/pgdp/Move.java" />
+        <option value="$PROJECT_DIR$/src/pgdp/Globals.java" />
+        <option value="$PROJECT_DIR$/src/pgdp/Penguin.java" />
         <option value="$PROJECT_DIR$/src/pgdp/Game.java" />
         <option value="$PROJECT_DIR$/src/pgdp/Main.java" />
+        <option value="$PROJECT_DIR$/src/pgdp/Animal.java" />
+        <option value="$PROJECT_DIR$/src/pgdp/Position.java" />
       </list>
     </option>
   </component>
@@ -213,8 +286,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -253,6 +324,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -695,30 +768,31 @@
       <option name="presentableId" value="Default" />
       <updated>1484144135759</updated>
       <workItem from="1484144140520" duration="5502000" />
-      <workItem from="1484257271589" duration="12115000" />
+      <workItem from="1484257271589" duration="16316000" />
+      <workItem from="1484399581059" duration="3633000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17617000" />
+    <option name="totallyTimeSpent" value="25451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23835616" sideWeight="0.49030694" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23835616" sideWeight="0.509693" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.49676898" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18203124" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12520194" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -776,7 +850,16 @@
     <option name="LAST_COMMIT_MESSAGE" value="implement `reset` to create the initial position" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint enabled="true" log-message="true" type="java-exception">
+          <properties />
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -784,6 +867,160 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Penguin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="83" column="12" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Globals.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Snake.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding>
+            <element signature="e#1174#1175#0" expanded="true" />
+            <element signature="e#1211#1212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Leopard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Predator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Position.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2910">
+          <caret line="196" column="51" selection-start-line="196" selection-start-column="51" selection-end-line="196" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Move.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9855">
+          <caret line="657" column="0" selection-start-line="657" selection-start-column="0" selection-end-line="657" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#122414#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#4846#4847#0" expanded="false" />
+            <element signature="e#4886#4887#0" expanded="false" />
+            <element signature="e#5859#5860#0" expanded="false" />
+            <element signature="e#5922#5923#0" expanded="false" />
+            <element signature="e#12931#12932#0" expanded="false" />
+            <element signature="e#12983#12984#0" expanded="false" />
+            <element signature="e#18614#18615#0" expanded="false" />
+            <element signature="e#18667#18668#0" expanded="false" />
+            <element signature="e#20560#20561#0" expanded="false" />
+            <element signature="e#20604#20605#0" expanded="false" />
+            <element signature="e#21794#21795#0" expanded="false" />
+            <element signature="e#21874#21875#0" expanded="false" />
+            <element signature="e#22493#22494#0" expanded="false" />
+            <element signature="e#22535#22536#0" expanded="false" />
+            <element signature="e#22850#22851#0" expanded="false" />
+            <element signature="e#22885#22886#0" expanded="false" />
+            <element signature="e#23141#23142#0" expanded="false" />
+            <element signature="e#23181#23182#0" expanded="false" />
+            <element signature="e#29826#29827#0" expanded="false" />
+            <element signature="e#29897#29898#0" expanded="false" />
+            <element signature="e#36782#36783#0" expanded="false" />
+            <element signature="e#36848#36849#0" expanded="false" />
+            <element signature="e#47408#47409#0" expanded="false" />
+            <element signature="e#47472#47473#0" expanded="false" />
+            <element signature="e#55768#55769#0" expanded="false" />
+            <element signature="e#55812#55813#0" expanded="false" />
+            <element signature="e#56425#56426#0" expanded="false" />
+            <element signature="e#56502#56503#0" expanded="false" />
+            <element signature="e#58524#58525#0" expanded="false" />
+            <element signature="e#58561#58562#0" expanded="false" />
+            <element signature="e#62972#62973#0" expanded="false" />
+            <element signature="e#63028#63029#0" expanded="false" />
+            <element signature="e#66593#66594#0" expanded="false" />
+            <element signature="e#66631#66632#0" expanded="false" />
+            <element signature="e#70089#70090#0" expanded="false" />
+            <element signature="e#70142#70143#0" expanded="false" />
+            <element signature="e#76845#76846#0" expanded="false" />
+            <element signature="e#76904#76905#0" expanded="false" />
+            <element signature="e#81336#81337#0" expanded="false" />
+            <element signature="e#81387#81388#0" expanded="false" />
+            <element signature="e#81771#81772#0" expanded="false" />
+            <element signature="e#81820#81821#0" expanded="false" />
+            <element signature="e#93265#93266#0" expanded="false" />
+            <element signature="e#93303#93304#0" expanded="false" />
+            <element signature="e#100216#100217#0" expanded="false" />
+            <element signature="e#100271#100272#0" expanded="false" />
+            <element signature="e#106802#106803#0" expanded="false" />
+            <element signature="e#106857#106858#0" expanded="false" />
+            <element signature="e#108993#108994#0" expanded="false" />
+            <element signature="e#109020#109021#0" expanded="false" />
+            <element signature="e#113752#113753#0" expanded="false" />
+            <element signature="e#113814#113815#0" expanded="false" />
+            <element signature="e#114321#114322#0" expanded="false" />
+            <element signature="e#114360#114361#0" expanded="false" />
+            <element signature="e#115506#115507#0" expanded="false" />
+            <element signature="e#115560#115561#0" expanded="false" />
+            <element signature="e#116474#116475#0" expanded="false" />
+            <element signature="e#116513#116514#0" expanded="false" />
+            <element signature="e#116906#116907#0" expanded="false" />
+            <element signature="e#116949#116950#0" expanded="false" />
+            <element signature="e#117784#117785#0" expanded="false" />
+            <element signature="e#117826#117827#0" expanded="false" />
+            <element signature="e#118261#118262#0" expanded="false" />
+            <element signature="e#118300#118301#0" expanded="false" />
+            <element signature="e#118742#118743#0" expanded="false" />
+            <element signature="e#118782#118783#0" expanded="false" />
+            <element signature="e#119232#119233#0" expanded="false" />
+            <element signature="e#119273#119274#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pgdp/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -858,30 +1095,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pgdp/Move.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pgdp/IO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
           <folding>
-            <element signature="e#566#567#0" expanded="true" />
-            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#566#567#0" expanded="false" />
+            <element signature="e#624#625#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pgdp/Globals.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -909,30 +1130,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pgdp/Animal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pgdp/Position.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-          <folding>
-            <element signature="e#910#911#0" expanded="true" />
-            <element signature="e#942#943#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pgdp/Leopard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Snake.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="235" column="18" selection-start-line="235" selection-start-column="18" selection-end-line="235" selection-end-column="18" />
+          <folding>
+            <element signature="e#10180#10181#0" expanded="false" />
+            <element signature="e#10263#10264#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9090">
+          <caret line="657" column="0" selection-start-line="657" selection-start-column="0" selection-end-line="657" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#122414#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#4846#4847#0" expanded="false" />
+            <element signature="e#4886#4887#0" expanded="false" />
+            <element signature="e#5859#5860#0" expanded="false" />
+            <element signature="e#5922#5923#0" expanded="false" />
+            <element signature="e#12931#12932#0" expanded="false" />
+            <element signature="e#12983#12984#0" expanded="false" />
+            <element signature="e#18614#18615#0" expanded="false" />
+            <element signature="e#18667#18668#0" expanded="false" />
+            <element signature="e#20560#20561#0" expanded="false" />
+            <element signature="e#20604#20605#0" expanded="false" />
+            <element signature="e#21794#21795#0" expanded="false" />
+            <element signature="e#21874#21875#0" expanded="false" />
+            <element signature="e#22493#22494#0" expanded="false" />
+            <element signature="e#22535#22536#0" expanded="false" />
+            <element signature="e#22850#22851#0" expanded="false" />
+            <element signature="e#22885#22886#0" expanded="false" />
+            <element signature="e#23141#23142#0" expanded="false" />
+            <element signature="e#23181#23182#0" expanded="false" />
+            <element signature="e#29826#29827#0" expanded="false" />
+            <element signature="e#29897#29898#0" expanded="false" />
+            <element signature="e#36782#36783#0" expanded="false" />
+            <element signature="e#36848#36849#0" expanded="false" />
+            <element signature="e#47408#47409#0" expanded="false" />
+            <element signature="e#47472#47473#0" expanded="false" />
+            <element signature="e#55768#55769#0" expanded="false" />
+            <element signature="e#55812#55813#0" expanded="false" />
+            <element signature="e#56425#56426#0" expanded="false" />
+            <element signature="e#56502#56503#0" expanded="false" />
+            <element signature="e#58524#58525#0" expanded="false" />
+            <element signature="e#58561#58562#0" expanded="false" />
+            <element signature="e#62972#62973#0" expanded="false" />
+            <element signature="e#63028#63029#0" expanded="false" />
+            <element signature="e#66593#66594#0" expanded="false" />
+            <element signature="e#66631#66632#0" expanded="false" />
+            <element signature="e#70089#70090#0" expanded="false" />
+            <element signature="e#70142#70143#0" expanded="false" />
+            <element signature="e#76845#76846#0" expanded="false" />
+            <element signature="e#76904#76905#0" expanded="false" />
+            <element signature="e#81336#81337#0" expanded="false" />
+            <element signature="e#81387#81388#0" expanded="false" />
+            <element signature="e#81771#81772#0" expanded="false" />
+            <element signature="e#81820#81821#0" expanded="false" />
+            <element signature="e#93265#93266#0" expanded="false" />
+            <element signature="e#93303#93304#0" expanded="false" />
+            <element signature="e#100216#100217#0" expanded="false" />
+            <element signature="e#100271#100272#0" expanded="false" />
+            <element signature="e#106802#106803#0" expanded="false" />
+            <element signature="e#106857#106858#0" expanded="false" />
+            <element signature="e#108993#108994#0" expanded="false" />
+            <element signature="e#109020#109021#0" expanded="false" />
+            <element signature="e#113752#113753#0" expanded="false" />
+            <element signature="e#113814#113815#0" expanded="false" />
+            <element signature="e#114321#114322#0" expanded="false" />
+            <element signature="e#114360#114361#0" expanded="false" />
+            <element signature="e#115506#115507#0" expanded="false" />
+            <element signature="e#115560#115561#0" expanded="false" />
+            <element signature="e#116474#116475#0" expanded="false" />
+            <element signature="e#116513#116514#0" expanded="false" />
+            <element signature="e#116906#116907#0" expanded="false" />
+            <element signature="e#116949#116950#0" expanded="false" />
+            <element signature="e#117784#117785#0" expanded="false" />
+            <element signature="e#117826#117827#0" expanded="false" />
+            <element signature="e#118261#118262#0" expanded="false" />
+            <element signature="e#118300#118301#0" expanded="false" />
+            <element signature="e#118742#118743#0" expanded="false" />
+            <element signature="e#118782#118783#0" expanded="false" />
+            <element signature="e#119232#119233#0" expanded="false" />
+            <element signature="e#119273#119274#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Move.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+          <folding>
+            <element signature="e#1174#1175#0" expanded="true" />
+            <element signature="e#1211#1212#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -946,39 +1265,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pgdp/Penguin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+        <state relative-caret-position="45">
+          <caret line="82" column="131" selection-start-line="82" selection-start-column="131" selection-end-line="82" selection-end-column="131" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pgdp/Snake.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pgdp/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="99" column="13" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
-          <folding>
-            <element signature="e#935#936#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
-            <element signature="e#1008#1009#0" expanded="true" />
-            <element signature="e#1046#1047#0" expanded="true" />
-            <element signature="e#1089#1090#0" expanded="true" />
-            <element signature="e#1126#1127#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pgdp/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="26" column="67" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
+        <state relative-caret-position="403">
+          <caret line="58" column="12" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Globals.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Animal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Position.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="212" column="63" selection-start-line="212" selection-start-column="63" selection-end-line="212" selection-end-column="63" />
           <folding />
         </state>
       </provider>

@@ -21,11 +21,11 @@ public class Move {
     public Move(String move){
 
         if (move.length() != 4) {
-            throw new RuntimeException("Move has to be 4 characters long");
+            throw new RuntimeException("Move " + move + " has to be 4 characters long");
         }
 
         this.from = "" + move.charAt(0) + move.charAt(1);
-        this.from = "" + move.charAt(2) + move.charAt(3);
+        this.to = "" + move.charAt(2) + move.charAt(3);
     }
 
     @Override

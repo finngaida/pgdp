@@ -11,6 +11,11 @@ public class Animal {
     public String square;  // Auf welchem Feld? (genau zwei Zeichen, z. B. "e4")
     public Position position; // Auf welchem Spielbrett?
 
+    public void setSquare(String s) {
+        int col = Globals.i(s.charAt(1))+2;
+        System.out.println("setting square: " + col);
+        this.square = ""+s.charAt(0)+col;
+    }
 
     /**
      * Dem Konstruktor wird das Geschlecht des Tiers uebergeben.

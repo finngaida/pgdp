@@ -1,5 +1,7 @@
 package pgdp;
 
+import java.util.Arrays;
+
 /**
  * Die Klasse Game fuehrt die Benutzerinteraktion durch.
  *
@@ -28,8 +30,11 @@ public class Game {
         pos = new Position();
         pos.reset(ladiesFirst ? 'W' : 'M');
 
-        System.out.println(pos.toString());
+        printBoard();
+    }
 
+    public void printBoard() {
+        System.out.println(pos.toString());
     }
 
     public Boolean finished() {
@@ -45,8 +50,17 @@ public class Game {
     }
 
     public Boolean validMove(String move) {
+
+        System.out.println("[DEBUG]: checking move " + move);
+
+        System.out.println("[DEBUG]: Length is " + move.length());
+
         if (move.length() != 4) {
             return false;
+        }
+
+        if (move.equals("pass")) {
+            return true;
         }
 
         int a = Globals.i(move.charAt(0));
@@ -54,11 +68,15 @@ public class Game {
         int c = Globals.i(move.charAt(2));
         int d = Globals.i(move.charAt(3));
 
+        System.out.println("[DEBUG]: parts: " + a + b + c + d);
+
         if (a == Integer.MAX_VALUE || b == Integer.MAX_VALUE || c == Integer.MAX_VALUE || d == Integer.MAX_VALUE) {
             return false;
         }
 
         Animal[][] board = pos.boardRepresentation();
+
+        System.out.println("[DEBUG]: board is used at the animal location: " + board[a][b]);
 
         if (board[a][b] == null) {
             return false;
@@ -67,17 +85,21 @@ public class Game {
         Animal animal = board[a][b];
         Boolean contains = false;
 
+        System.out.println("[DEBUG]: moving animal: " + animal.toString());
+
         for (int i = 0; i < animal.possibleMoves().length; i++) {
             if (animal.possibleMoves()[i].toString().equals(move)) {
                 contains = true;
             }
         }
 
+        System.out.println("[DEBUG]: found move in animal.possibleMoves(): " + Arrays.toString(animal.possibleMoves()) + contains);
+
         return contains;
     }
 
     public String animalsDescription(Boolean forW) {
-        int eleCount, horseCount, rabbitCount = 0;
+        int eleCount = 0, horseCount = 0, rabbitCount = 0;
         String ret = "";
 
         for (int i = 0; i < pos.animals().length; i++) {
