@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17ccd7aa-99da-43a4-ae36-be68dd747eee" name="Default" comment="implement `reset` to create the initial position">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pgdp/Elephant.java" afterPath="$PROJECT_DIR$/src/pgdp/Elephant.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pgdp/Game.java" afterPath="$PROJECT_DIR$/src/pgdp/Game.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pgdp/Horse.java" afterPath="$PROJECT_DIR$/src/pgdp/Horse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pgdp/Leopard.java" afterPath="$PROJECT_DIR$/src/pgdp/Leopard.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pgdp/Main.java" afterPath="$PROJECT_DIR$/src/pgdp/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pgdp/Penguin.java" afterPath="$PROJECT_DIR$/src/pgdp/Penguin.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pgdp/Position.java" afterPath="$PROJECT_DIR$/src/pgdp/Position.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pgdp/Rabbit.java" afterPath="$PROJECT_DIR$/src/pgdp/Rabbit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pgdp/Snake.java" afterPath="$PROJECT_DIR$/src/pgdp/Snake.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pgdp/Vegetarian.java" afterPath="$PROJECT_DIR$/src/pgdp/Vegetarian.java" />
     </list>
     <ignored path="Kampf.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,11 +28,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pgdp/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Elephant.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pgdp/Elephant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="60" column="43" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Penguin.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pgdp/Penguin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="102" column="5" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
+            <state relative-caret-position="318">
+              <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -45,8 +61,18 @@
       <file leaf-file-name="Snake.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pgdp/Snake.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
+            <state relative-caret-position="1038">
               <caret line="102" column="4" selection-start-line="102" selection-start-column="4" selection-end-line="108" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Horse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pgdp/Horse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="76" column="69" selection-start-line="76" selection-start-column="69" selection-end-line="76" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -55,24 +81,27 @@
       <file leaf-file-name="Rabbit.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pgdp/Rabbit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
+            <state relative-caret-position="1083">
               <caret line="82" column="5" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Animal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pgdp/Animal.java">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pgdp/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-141">
-              <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-              <folding />
+            <state relative-caret-position="408">
+              <caret line="110" column="25" selection-start-line="110" selection-start-column="25" selection-end-line="110" selection-end-column="25" />
+              <folding>
+                <element signature="e#3339#3340#0" expanded="true" />
+                <element signature="e#3367#3368#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Leopard.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Leopard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pgdp/Leopard.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="309">
@@ -92,44 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Vegetarian.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pgdp/Vegetarian.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="23" />
-              <folding>
-                <element signature="e#288#289#0" expanded="true" />
-                <element signature="e#318#319#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Horse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pgdp/Horse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="99" column="5" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Position.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pgdp/Position.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="190" column="58" selection-start-line="190" selection-start-column="58" selection-end-line="190" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Elephant.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pgdp/Elephant.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+            <state relative-caret-position="393">
+              <caret line="280" column="34" selection-start-line="280" selection-start-column="34" selection-end-line="280" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -158,17 +154,17 @@
         <option value="$PROJECT_DIR$/src/pgdp/Predator.java" />
         <option value="$PROJECT_DIR$/src/pgdp/Move.java" />
         <option value="$PROJECT_DIR$/src/pgdp/Globals.java" />
-        <option value="$PROJECT_DIR$/src/pgdp/Game.java" />
         <option value="$PROJECT_DIR$/src/pgdp/Animal.java" />
-        <option value="$PROJECT_DIR$/src/pgdp/Main.java" />
         <option value="$PROJECT_DIR$/src/pgdp/Vegetarian.java" />
         <option value="$PROJECT_DIR$/src/pgdp/Elephant.java" />
-        <option value="$PROJECT_DIR$/src/pgdp/Horse.java" />
         <option value="$PROJECT_DIR$/src/pgdp/Rabbit.java" />
-        <option value="$PROJECT_DIR$/src/pgdp/Position.java" />
         <option value="$PROJECT_DIR$/src/pgdp/Snake.java" />
-        <option value="$PROJECT_DIR$/src/pgdp/Penguin.java" />
         <option value="$PROJECT_DIR$/src/pgdp/Leopard.java" />
+        <option value="$PROJECT_DIR$/src/pgdp/Penguin.java" />
+        <option value="$PROJECT_DIR$/src/pgdp/Position.java" />
+        <option value="$PROJECT_DIR$/src/pgdp/Main.java" />
+        <option value="$PROJECT_DIR$/src/pgdp/Horse.java" />
+        <option value="$PROJECT_DIR$/src/pgdp/Game.java" />
       </list>
     </option>
   </component>
@@ -690,12 +686,12 @@
       <updated>1484144135759</updated>
       <workItem from="1484144140520" duration="5502000" />
       <workItem from="1484257271589" duration="16316000" />
-      <workItem from="1484399581059" duration="6120000" />
+      <workItem from="1484399581059" duration="8086000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27938000" />
+    <option name="totallyTimeSpent" value="29904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -830,8 +826,8 @@
         <state relative-caret-position="960">
           <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
-            <element signature="e#1174#1175#0" expanded="true" />
-            <element signature="e#1211#1212#0" expanded="true" />
+            <element signature="e#3339#3340#0" expanded="true" />
+            <element signature="e#3367#3368#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1135,25 +1131,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pgdp/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pgdp/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding>
-            <element signature="e#1174#1175#0" expanded="true" />
-            <element signature="e#1211#1212#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pgdp/Vegetarian.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1162,30 +1139,6 @@
             <element signature="e#288#289#0" expanded="true" />
             <element signature="e#318#319#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pgdp/Elephant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pgdp/Horse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="99" column="5" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pgdp/Rabbit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="82" column="5" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1205,17 +1158,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pgdp/Position.java">
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Leopard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="190" column="58" selection-start-line="190" selection-start-column="58" selection-end-line="190" selection-end-column="58" />
+        <state relative-caret-position="309">
+          <caret line="166" column="5" selection-start-line="166" selection-start-column="5" selection-end-line="166" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Rabbit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1083">
+          <caret line="82" column="5" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pgdp/Snake.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
+        <state relative-caret-position="1038">
           <caret line="102" column="4" selection-start-line="102" selection-start-column="4" selection-end-line="108" selection-end-column="5" />
           <folding />
         </state>
@@ -1223,17 +1184,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pgdp/Penguin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="102" column="5" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
+        <state relative-caret-position="318">
+          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pgdp/Leopard.java">
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Elephant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="166" column="5" selection-start-line="166" selection-start-column="5" selection-end-line="166" selection-end-column="5" />
+        <state relative-caret-position="420">
+          <caret line="60" column="43" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Position.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="280" column="34" selection-start-line="280" selection-start-column="34" selection-end-line="280" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Horse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="76" column="69" selection-start-line="76" selection-start-column="69" selection-end-line="76" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pgdp/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="110" column="25" selection-start-line="110" selection-start-column="25" selection-end-line="110" selection-end-column="25" />
+          <folding>
+            <element signature="e#3339#3340#0" expanded="true" />
+            <element signature="e#3367#3368#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

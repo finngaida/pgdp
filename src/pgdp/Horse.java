@@ -62,7 +62,7 @@ public class Horse extends Vegetarian {
         }
 
         // Oben rechts 2
-        if (row < 6 && col < 5 && position.boardRepresentation()[row-3][col+3] == null) {
+        if (row < 6 && col < 5 && position.boardRepresentation()[row+3][col+3] == null) {
             allMoves[counter] = Globals.s(row+3)+Globals.s(col+4);
             counter++;
         }
@@ -74,7 +74,7 @@ public class Horse extends Vegetarian {
         }
 
         // Oben links 2
-        if (row < 6 && col > 2 && position.boardRepresentation()[row+3][col-3] == null) {
+        if (row < 6 && col > 2 && position.boardRepresentation()[row-3][col-3] == null) {
             allMoves[counter] = Globals.s(row+3)+Globals.s(col-2);
             counter++;
         }

@@ -1,7 +1,5 @@
 package pgdp;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
 /**
  * Die Klasse Main enthaelt das Hauptprogramm.
  *
@@ -16,6 +14,7 @@ public class Main {
     public static void main(String args[]) {
 
         Boolean whoBegins = IO.readInt("Wer fängt an? (0 für w, 1 für m)", 0, 1) == 0;
+        boolean wPlaying = whoBegins;
 
         Game game = new Game();
         game.startGame(whoBegins);
@@ -23,22 +22,26 @@ public class Main {
         while (!game.finished()) {
 
             // Bisschen Info
-            System.out.println((whoBegins ? "W" : "M") + " ist am Zug. Du hast noch:");
-            System.out.println(game.animalsDescription(whoBegins));
+            System.out.println((wPlaying ? "W" : "M") + " ist am Zug. Du hast noch:");
+            System.out.println(game.animalsDescription(wPlaying));
 
             int moveCount = 0;
             String[] moves = new String[4];
             String move = "";
             while (moveCount < 4) {
 
+                move = "";
+                //System.out.println("[DEBUG]: move " + moveCount);
+
                 // erstmal einen Zug einholen
-                while (!game.validMove(move)) {
-                    move = IO.readString((whoBegins ? "W" : "M") + ": (Zug " + (moveCount + 1) + " von 4) Gib einen Zug im Format 'a2a3' ein. (oder 'pass' falls du nicht mehr ziehen möchtest)");
-                    System.out.println("[DEBUG]: got move: " + move + " valid: " + game.validMove(move));
+                while (!game.validMove(move, wPlaying)) {
+                    move = IO.readString((wPlaying ? "W" : "M") + ": (Zug " + (moveCount + 1) + " von 4) Gib einen Zug im Format 'a2a3' ein. (oder 'pass' falls du nicht mehr ziehen möchtest)");
+                    //System.out.println("[DEBUG]: got move: " + move);
                 }
 
                 // Abbruchfall
                 if (move.equals("pass")) {
+                    //System.out.println("[DEBUG]: passed");
                     break;
                 }
 
@@ -47,6 +50,8 @@ public class Main {
                 moveCount++;
             }
 
+            //System.out.println("[DEBUG]: that's it");
+
             // strings in Moves konvertieren
             Move[] realMoves = new Move[moveCount];
             for (int i = 0; i < moveCount; i++) {
@@ -54,7 +59,11 @@ public class Main {
             }
 
             game.playMoves(realMoves);
-            whoBegins = !whoBegins;
+            wPlaying = !wPlaying;
+
+            if (wPlaying == whoBegins) {
+                game.sunset();
+            }
 
             game.printBoard();
         }

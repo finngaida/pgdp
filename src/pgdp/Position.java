@@ -276,7 +276,11 @@ public class Position {
         return 'X';
     }
 
-
+    public void sunset() {
+        for (int i = 0; i < nrAnimals; i++) {
+            myAnimals[i].sunset();
+        }
+    }
 
 
 

@@ -39,8 +39,6 @@ public class Penguin extends Predator {
         String[] allMoves = new String[8];
         int count = 0;
 
-        System.out.println("[DEBUG]: row: " + row + ", col: " + col);
-
         if (row > 0) {
             if (col < 7 && (position.boardRepresentation()[leftI][topI] == null || position.boardRepresentation()[leftI][topI] instanceof Vegetarian)) {
                 allMoves[count] = left + top;

@@ -49,13 +49,14 @@ public class Game {
         pos.applyMoves(moves);
     }
 
-    public Boolean validMove(String move) {
+    public Boolean validMove(String move, Boolean wPlaying) {
 
-        System.out.println("[DEBUG]: checking move " + move);
+        //System.out.println("[DEBUG]: checking move " + move);
 
-        System.out.println("[DEBUG]: Length is " + move.length());
+        //System.out.println("[DEBUG]: Length is " + move.length());
 
         if (move.length() != 4) {
+            System.out.println("[INFO]: der Zug muss 4 Zeichen lang sein");
             return false;
         }
 
@@ -68,24 +69,33 @@ public class Game {
         int c = Globals.i(move.charAt(2));
         int d = Globals.i(move.charAt(3));
 
-        System.out.println("[DEBUG]: parts: " + a + b + c + d);
+        //System.out.println("[DEBUG]: parts: " + a + b + c + d);
 
         if (a == Integer.MAX_VALUE || b == Integer.MAX_VALUE || c == Integer.MAX_VALUE || d == Integer.MAX_VALUE) {
+            System.out.println("[INFO]: Der Zug muss im Format [a-h][1-8][a-h][1-8] sein");
             return false;
         }
 
         Animal[][] board = pos.boardRepresentation();
 
-        System.out.println("[DEBUG]: board is used at the animal location: " + board[a][b]);
+        //System.out.println("[DEBUG]: board is used at the animal location: " + board[a][b]);
 
         if (board[a][b] == null) {
+            System.out.println("[INFO]: An der Ausgangsstelle steht kein Tier.");
             return false;
         }
 
         Animal animal = board[a][b];
+
+        // check for the right sex
+        if (animal.female != wPlaying) {
+            System.out.println("[INFO]: Das Tier, das du bewegen möchtest gehört nicht dir");
+            return false;
+        }
+
         Boolean contains = false;
 
-        System.out.println("[DEBUG]: moving animal: " + animal.toString());
+        //System.out.println("[DEBUG]: animal to move: " + animal.toString());
 
         for (int i = 0; i < animal.possibleMoves().length; i++) {
             if (animal.possibleMoves()[i].toString().equals(move)) {
@@ -93,9 +103,17 @@ public class Game {
             }
         }
 
-        System.out.println("[DEBUG]: found move in animal.possibleMoves(): " + Arrays.toString(animal.possibleMoves()) + contains);
+        //System.out.println("[DEBUG]: found move in animal.possibleMoves(): " + Arrays.toString(animal.possibleMoves()) + ": " + contains);
+        if (contains) {
+            return true;
+        } else {
+            System.out.println("[INFO]: Das gewählte Tier kann diesen Zug nicht machen.");
+            return false;
+        }
+    }
 
-        return contains;
+    public void sunset() {
+        pos.sunset();
     }
 
     public String animalsDescription(Boolean forW) {
