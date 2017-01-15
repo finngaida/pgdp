@@ -13,4 +13,6 @@ public class Predator extends Animal {
         super(female);
     }
 
+    public void eat() { }
+
 }

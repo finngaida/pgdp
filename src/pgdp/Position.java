@@ -184,6 +184,7 @@ public class Position {
             if (actor instanceof Predator && boardRepresentation()[toRow][toCol] != null && boardRepresentation()[toRow][toCol] instanceof Vegetarian) {
                 // kill the animal that was there before
                 kill(toRow, toCol);
+                ((Predator) actor).eat();
             }
 
             // and then move

@@ -49,7 +49,7 @@ public class Globals {
 
     // Der Wert von ANSI darf geaendert werden.
     // Alles andere muss unveraendert bleiben.
-    private static final boolean ANSI = true; // or false
+    private static final boolean ANSI = false; // or false
 
     // Ab hier darf nichts mehr veraendert werden.
     private static final String ANSI_W_LIGHT = "\u001B[34;47m";

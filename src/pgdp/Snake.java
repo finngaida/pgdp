@@ -9,6 +9,10 @@ public class Snake extends Predator {
 
     public int daysLeft() { return withoutFood; }
 
+    public void eat() {
+        withoutFood = 9;
+    }
+
     /**
      * Dem Konstruktor wird das Geschlecht des Tiers uebergeben.
      *

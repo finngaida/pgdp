@@ -41,9 +41,10 @@ public class Main {
                     move = IO.readString((wPlaying ? "W" : "M") + ": (Zug " + (moveCount + 1) + " von 4) Gib einen Zug im Format 'a2a3' ein. (oder 'pass' falls du nicht mehr ziehen möchtest)");
                     //System.out.println("[DEBUG]: got move: " + move);
 
-                    if (move.length() == 4) {
+                    if (move.length() == 4 && !move.equals("pass")) {
                         int row = Globals.i(move.charAt(0));
                         int col = Globals.i(move.charAt(1));
+                        System.out.println("[DEBUG]: move: " + move);
                         Animal hans = game.pos().boardRepresentation()[row][col];
 
                         if (hans instanceof Predator) {

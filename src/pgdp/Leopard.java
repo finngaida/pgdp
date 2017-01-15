@@ -9,6 +9,10 @@ public class Leopard extends Predator {
 
     public int daysLeft() { return withoutFood; }
 
+    public void eat() {
+        withoutFood = 5;
+    }
+
     /**
      * Dem Konstruktor wird das Geschlecht des Tiers uebergeben.
      *
