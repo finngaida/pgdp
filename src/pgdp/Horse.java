@@ -20,74 +20,74 @@ public class Horse extends Vegetarian {
         String[] allMoves = new String[12];
 
         // 1 nach links
-        if (row > 1 && position.boardRepresentation()[row-1][col] == null) {
+        if (row > 0 && position.boardRepresentation()[row-1][col] == null) {
             allMoves[counter] = Globals.s(row-1)+(col+1);
             counter++;
         }
 
         // 1 nach oben
-        if (col < 6 && position.boardRepresentation()[row][col+1] == null) {
+        if (col < 7 && position.boardRepresentation()[row][col+1] == null) {
             allMoves[counter] = Globals.s(row)+(col+2);
             counter++;
         }
 
         // 1 nach rechts
-        if (row < 8 && position.boardRepresentation()[row+1][col] == null) {
+        if (row < 7 && position.boardRepresentation()[row+1][col] == null) {
             allMoves[counter] = Globals.s(row+1)+(col+1);
             counter++;
         }
 
         // 1 nach unten
-        if (col > 1 && position.boardRepresentation()[row][col-1] == null) {
+        if (col > 0 && position.boardRepresentation()[row][col-1] == null) {
             allMoves[counter] = Globals.s(row)+(col);
             counter++;
         }
 
         // Oben links 1
-        if (row > 2 && col < 6 && position.boardRepresentation()[row-2][col+2] == null) {
-            allMoves[counter] = Globals.s(row-2)+Globals.s(col+3);
+        if (row > 1 && col < 6 && position.boardRepresentation()[row-2][col+2] == null) {
+            allMoves[counter] = Globals.s(row-2)+(col+3);
             counter++;
         }
 
         // Oben links 2
-        if (row > 3 && col < 5 && position.boardRepresentation()[row-3][col+3] == null) {
-            allMoves[counter] = Globals.s(row-3)+Globals.s(col+4);
+        if (row > 2 && col < 5 && position.boardRepresentation()[row-3][col+3] == null) {
+            allMoves[counter] = Globals.s(row-3)+(col+4);
             counter++;
         }
 
         // Oben rechts 1
-        if (row < 7 && col < 6 && position.boardRepresentation()[row+2][col+2] == null) {
-            allMoves[counter] = Globals.s(row+2)+Globals.s(col+3);
+        if (row < 6 && col < 6 && position.boardRepresentation()[row+2][col+2] == null) {
+            allMoves[counter] = Globals.s(row+2)+(col+3);
             counter++;
         }
 
         // Oben rechts 2
-        if (row < 6 && col < 5 && position.boardRepresentation()[row+3][col+3] == null) {
-            allMoves[counter] = Globals.s(row+3)+Globals.s(col+4);
+        if (row < 5 && col < 5 && position.boardRepresentation()[row+3][col+3] == null) {
+            allMoves[counter] = Globals.s(row+3)+(col+4);
             counter++;
         }
 
         // Unten rechts 1
-        if (row < 7 && col > 1 && position.boardRepresentation()[row+2][col-2] == null) {
-            allMoves[counter] = Globals.s(row+2)+Globals.s(col-1);
+        if (row < 6 && col > 1 && position.boardRepresentation()[row+2][col-2] == null) {
+            allMoves[counter] = Globals.s(row+2)+(col-1);
             counter++;
         }
 
         // Oben links 2
-        if (row < 6 && col > 2 && position.boardRepresentation()[row-3][col-3] == null) {
-            allMoves[counter] = Globals.s(row+3)+Globals.s(col-2);
+        if (row < 5 && col > 2 && position.boardRepresentation()[row+3][col-3] == null) {
+            allMoves[counter] = Globals.s(row+3)+(col-2);
             counter++;
         }
 
         // Unten links 1
-        if (row > 2 && col > 1 && position.boardRepresentation()[row-2][col-2] == null) {
-            allMoves[counter] = Globals.s(row-2)+Globals.s(col-1);
+        if (row > 1 && col > 1 && position.boardRepresentation()[row-2][col-2] == null) {
+            allMoves[counter] = Globals.s(row-2)+(col-1);
             counter++;
         }
 
         // Unten links 2
-        if (row > 3 && col > 2 && position.boardRepresentation()[row-3][col-3] == null) {
-            allMoves[counter] = Globals.s(row-3)+Globals.s(col-2);
+        if (row > 2 && col > 2 && position.boardRepresentation()[row-3][col-3] == null) {
+            allMoves[counter] = Globals.s(row-3)+(col-2);
             counter++;
         }
 

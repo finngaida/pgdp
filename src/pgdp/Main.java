@@ -28,21 +28,52 @@ public class Main {
             int moveCount = 0;
             String[] moves = new String[4];
             String move = "";
+            int vegCount = 0, predCount = 0;
+
             while (moveCount < 4) {
 
                 move = "";
                 //System.out.println("[DEBUG]: move " + moveCount);
 
                 // erstmal einen Zug einholen
-                while (!game.validMove(move, wPlaying)) {
+                boolean block = false;
+                while (!game.validMove(move, wPlaying) && !block) {
                     move = IO.readString((wPlaying ? "W" : "M") + ": (Zug " + (moveCount + 1) + " von 4) Gib einen Zug im Format 'a2a3' ein. (oder 'pass' falls du nicht mehr ziehen möchtest)");
                     //System.out.println("[DEBUG]: got move: " + move);
+
+                    if (move.length() == 4) {
+                        int row = Globals.i(move.charAt(0));
+                        int col = Globals.i(move.charAt(1));
+                        Animal hans = game.pos().boardRepresentation()[row][col];
+
+                        if (hans instanceof Predator) {
+                            if (predCount > 0) {
+                                System.out.println("[INFO]: Du darfst nur 1 Raubtier pro Runde bewegen");
+                                move = "";
+                            }
+                        } else {
+                            if (vegCount > 2) {
+                                System.out.println("[INFO]: Du darfst nur 3 Vegetarier pro Runde bewegen");
+                                move = "";
+                            }
+                        }
+                    }
                 }
 
                 // Abbruchfall
                 if (move.equals("pass")) {
                     //System.out.println("[DEBUG]: passed");
                     break;
+                }
+
+                int row = Globals.i(move.charAt(0));
+                int col = Globals.i(move.charAt(1));
+                Animal hans = game.pos().boardRepresentation()[row][col];
+
+                if (hans instanceof Predator) {
+                    predCount++;
+                } else {
+                    vegCount++;
                 }
 
                 // move speichern

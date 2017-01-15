@@ -11,6 +11,10 @@ public class Game {
 
     private Position pos;
 
+    public Position pos() {
+        return this.pos;
+    }
+
     /**
      * Startet ein neues Spiel.
      * Der Benutzer wird ueber das Spielgeschehen informiert.
@@ -56,7 +60,7 @@ public class Game {
         //System.out.println("[DEBUG]: Length is " + move.length());
 
         if (move.length() != 4) {
-            System.out.println("[INFO]: der Zug muss 4 Zeichen lang sein");
+            //System.out.println("[INFO]: der Zug muss 4 Zeichen lang sein");
             return false;
         }
 
