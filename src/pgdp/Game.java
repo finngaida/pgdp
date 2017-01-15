@@ -53,7 +53,7 @@ public class Game {
         pos.applyMoves(moves);
     }
 
-    public Boolean validMove(String move, Boolean wPlaying) {
+    public Boolean validMove(String move, Boolean wPlaying, String[] previousMoves) {
 
         //System.out.println("[DEBUG]: checking move " + move);
 
@@ -78,6 +78,17 @@ public class Game {
         if (a == Integer.MAX_VALUE || b == Integer.MAX_VALUE || c == Integer.MAX_VALUE || d == Integer.MAX_VALUE) {
             System.out.println("[INFO]: Der Zug muss im Format [a-h][1-8][a-h][1-8] sein");
             return false;
+        }
+
+        for (int j = 0; j < previousMoves.length; j++) {
+            String mov = previousMoves[j];
+            //System.out.println("[DEBUG]: comparing " + mov + " and " + move);
+            if (mov != null) {
+                if ((mov.charAt(0) == move.charAt(0) && mov.charAt(1) == move.charAt(1)) || (mov.charAt(2) == move.charAt(0) && mov.charAt(3) == move.charAt(1))) {
+                    System.out.println("[INFO]: Dieses Tier wurde bereits bewegt");
+                    return false;
+                }
+            }
         }
 
         Animal[][] board = pos.boardRepresentation();
