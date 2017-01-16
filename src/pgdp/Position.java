@@ -194,7 +194,7 @@ public class Position {
                 System.out.println("[DEBUG]: exception: " + e);
             }
 
-            System.out.println("[DEBUG]: moving " + actor + " from " + fromRow + ", " + fromCol + " to " + toRow + ", " + toCol + " and as string: " + Globals.s(toRow) + (toCol+1));
+            //System.out.println("[DEBUG]: moving " + actor + " from " + fromRow + ", " + fromCol + " to " + toRow + ", " + toCol + " and as string: " + Globals.s(toRow) + (toCol+1));
         }
 
         next = (next == 'W' ? 'M' : 'W');

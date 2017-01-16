@@ -15,6 +15,6 @@ public class Vegetarian extends Animal {
 
     @Override
     public void sunset() {
-        super.sunset();
+
     }
 }
